@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:OVAL CPE Results,StreamName:Google_Chrome_Current_Windows-002.002,ErrorCount:0,WarnCount:0 -->
+
+<oval-res:oval_results xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-results-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-results-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-system-characteristics-schema.xsd" xmlns:oval-res="http://oval.mitre.org/XMLSchema/oval-results-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:ind-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" xmlns:oval-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5" xmlns:ind-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:win-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows" xmlns:linux-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" xmlns:linux-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux">
+      <oval-res:generator>
+            <oval:product_name>SCAP Compliance Checker</oval:product_name>
+            <oval:product_version>5.4</oval:product_version>
+            <oval:schema_version>5.11.2</oval:schema_version>
+            <oval:timestamp>2021-05-25T03:07:48</oval:timestamp>
+      </oval-res:generator>
+      <oval-res:directives>
+            <oval-res:definition_true content="full" reported="true"></oval-res:definition_true>
+            <oval-res:definition_false content="full" reported="true"></oval-res:definition_false>
+            <oval-res:definition_unknown content="full" reported="true"></oval-res:definition_unknown>
+            <oval-res:definition_error content="full" reported="true"></oval-res:definition_error>
+            <oval-res:definition_not_evaluated content="full" reported="true"></oval-res:definition_not_evaluated>
+            <oval-res:definition_not_applicable content="full" reported="true"></oval-res:definition_not_applicable>
+      </oval-res:directives>
+      <oval-def:oval_definitions>
+            <oval-def:generator>
+                  <oval:product_name>repotool</oval:product_name>
+                  <oval:schema_version>5.10</oval:schema_version>
+                  <oval:timestamp>2021-01-04T10:42:52</oval:timestamp>
+            </oval-def:generator>
+            <oval-def:definitions>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:2" class="inventory" version="6">
+                        <oval-def:metadata>
+                              <oval-def:title>Google Chrome is Installed</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:reference source="CPE" ref_id="cpe:/a:google:chrome"></oval-def:reference>
+                              <oval-def:description>A recent version of Google Chrome is installed.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criterion applicability_check="false" comment="64-bit Google Chrome is installed" negate="true" test_ref="oval:mil.disa.stig.chrome:tst:200"></oval-def:criterion>
+                                    <oval-def:criterion applicability_check="false" comment="32-bit Google Chrome is installed" negate="true" test_ref="oval:mil.disa.stig.chrome:tst:201"></oval-def:criterion>
+                              </oval-def:criteria>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criterion applicability_check="false" comment="64-bit Google Chrome is a recent version" test_ref="oval:mil.disa.stig.chrome:tst:202"></oval-def:criterion>
+                                    <oval-def:criterion applicability_check="false" comment="32-bit Google Chrome is a recent version" test_ref="oval:mil.disa.stig.chrome:tst:203"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+            </oval-def:definitions>
+            <oval-def:tests>
+                  <win-def:registry_test check="all" comment="64-bit Google Chrome is installed" check_existence="none_exist" id="oval:mil.disa.stig.chrome:tst:200" version="5" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:204"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="32-bit Google Chrome is installed" check_existence="none_exist" id="oval:mil.disa.stig.chrome:tst:201" version="4" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:205"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="at least one" comment="64-bit Google Chrome is a recent version" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:202" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:202"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:200"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="at least one" comment="32-bit Google Chrome is a recent version" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:203" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:203"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:200"></win-def:state>
+                  </win-def:registry_test>
+            </oval-def:tests>
+            <oval-def:objects>
+                  <win-def:registry_object comment="64-bit Google Chrome is installed" id="oval:mil.disa.stig.chrome:obj:200" version="2">
+                        <win-def:behaviors recurse_direction="down" max_depth="1"></win-def:behaviors>
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall</win-def:key>
+                        <win-def:name>DisplayName</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="32-bit Google Chrome is installed" id="oval:mil.disa.stig.chrome:obj:201" version="2">
+                        <win-def:behaviors recurse_direction="down" max_depth="1"></win-def:behaviors>
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</win-def:key>
+                        <win-def:name>DisplayName</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="64-bit Google Chrome version" id="oval:mil.disa.stig.chrome:obj:202" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key var_ref="oval:mil.disa.stig.chrome:var:200"></win-def:key>
+                        <win-def:name>DisplayVersion</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="32-bit Google Chrome version" id="oval:mil.disa.stig.chrome:obj:203" version="2">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key var_ref="oval:mil.disa.stig.chrome:var:201"></win-def:key>
+                        <win-def:name>DisplayVersion</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="64-bit Google Chrome is installed" id="oval:mil.disa.stig.chrome:obj:204" version="1">
+                        <oval-def:set>
+                              <oval-def:object_reference>oval:mil.disa.stig.chrome:obj:200</oval-def:object_reference>
+                              <oval-def:filter action="include">oval:mil.disa.stig.chrome:ste:201</oval-def:filter>
+                        </oval-def:set>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="64-bit Google Chrome is installed" id="oval:mil.disa.stig.chrome:obj:205" version="1">
+                        <oval-def:set>
+                              <oval-def:object_reference>oval:mil.disa.stig.chrome:obj:201</oval-def:object_reference>
+                              <oval-def:filter action="include">oval:mil.disa.stig.chrome:ste:201</oval-def:filter>
+                        </oval-def:set>
+                  </win-def:registry_object>
+            </oval-def:objects>
+            <oval-def:states>
+                  <win-def:registry_state comment="The registry key exists and is 33 or greater, per the Google Chrome STIG Overview" id="oval:mil.disa.stig.chrome:ste:200" version="2">
+                        <win-def:value datatype="version" operation="greater than or equal">33</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="The registry key exists and is 'Google Chrome'." id="oval:mil.disa.stig.chrome:ste:201" version="1">
+                        <win-def:value>Google Chrome</win-def:value>
+                  </win-def:registry_state>
+            </oval-def:states>
+            <oval-def:variables>
+                  <oval-def:local_variable datatype="string" comment="64-bit Google Chrome uninstall registry key" id="oval:mil.disa.stig.chrome:var:200" version="2">
+                        <oval-def:object_component object_ref="oval:mil.disa.stig.chrome:obj:204" item_field="key"></oval-def:object_component>
+                  </oval-def:local_variable>
+                  <oval-def:local_variable datatype="string" comment="32-bit Google Chrome uninstall registry key" id="oval:mil.disa.stig.chrome:var:201" version="2">
+                        <oval-def:object_component object_ref="oval:mil.disa.stig.chrome:obj:205" item_field="key"></oval-def:object_component>
+                  </oval-def:local_variable>
+            </oval-def:variables>
+      </oval-def:oval_definitions>
+      <oval-res:results>
+            <oval-res:system>
+                  <oval-res:definitions>
+                        <oval-res:definition result="true" definition_id="oval:mil.disa.stig.chrome:def:2" version="6">
+                              <oval-res:criteria applicability_check="false" result="true" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="true" operator="OR">
+                                          <oval-res:criterion applicability_check="false" result="true" negate="true" version="5" test_ref="oval:mil.disa.stig.chrome:tst:200"></oval-res:criterion>
+                                          <oval-res:criterion applicability_check="false" result="false" negate="true" version="4" test_ref="oval:mil.disa.stig.chrome:tst:201"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:criteria applicability_check="false" result="true" operator="OR">
+                                          <oval-res:criterion applicability_check="false" result="true" version="1" test_ref="oval:mil.disa.stig.chrome:tst:202"></oval-res:criterion>
+                                          <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:203"></oval-res:criterion>
+                                    </oval-res:criteria>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                  </oval-res:definitions>
+                  <oval-res:tests>
+                        <oval-res:test check="all" result="false" check_existence="none_exist" test_id="oval:mil.disa.stig.chrome:tst:200" version="5" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_item item_id="1" result="not evaluated"></oval-res:tested_item>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.stig.chrome:tst:201" version="4" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="at least one" result="true" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:202" version="1" state_operator="AND">
+                              <oval-res:tested_item item_id="53" result="true"></oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:200">SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="at least one" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:203" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                  </oval-res:tests>
+                  <oval-sc:oval_system_characteristics>
+                        <oval-sc:generator>
+                              <oval:product_name>SCAP Compliance Checker</oval:product_name>
+                              <oval:product_version>5.4</oval:product_version>
+                              <oval:schema_version>5.11.2</oval:schema_version>
+                              <oval:timestamp>2021-05-25T03:07:48</oval:timestamp>
+                        </oval-sc:generator>
+                        <oval-sc:system_info>
+                              <oval-sc:os_name>Windows Server 2016 Standard</oval-sc:os_name>
+                              <oval-sc:os_version>1607</oval-sc:os_version>
+                              <oval-sc:architecture>Intel64 Family 6 Model 60 Stepping 3</oval-sc:architecture>
+                              <oval-sc:primary_host_name>winserver</oval-sc:primary_host_name>
+                              <oval-sc:interfaces>
+                                    <oval-sc:interface>
+                                          <oval-sc:interface_name>[00000000] Intel(R) 82574L Gigabit Network Connection</oval-sc:interface_name>
+                                          <oval-sc:ip_address>192.168.0.48</oval-sc:ip_address>
+                                          <oval-sc:mac_address>00:50:56:BB:A1:2B</oval-sc:mac_address>
+                                    </oval-sc:interface>
+                              </oval-sc:interfaces>
+                              <__NS1:asset-identification xmlns:__NS1="http://scap.nist.gov/schema/scap/constructs/1.2">
+                                    <__NS2:object-ref ref-id="SCC_winserver" xmlns:__NS2="http://scap.nist.gov/schema/asset-reporting-format/1.1" />
+                              </__NS1:asset-identification>
+                        </oval-sc:system_info>
+                        <oval-sc:collected_objects>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.chrome:obj:200" version="2">
+                                    <oval-sc:reference item_ref="1"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="2"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="3"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="4"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="5"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="6"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="7"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="8"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="9"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="10"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="11"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="12"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="13"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="14"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="15"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.chrome:obj:204" version="1">
+                                    <oval-sc:reference item_ref="1"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.chrome:obj:201" version="2">
+                                    <oval-sc:reference item_ref="16"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="17"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="18"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="19"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="20"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="21"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="22"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="23"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="24"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="25"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="26"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="27"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="28"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="29"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="30"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="31"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="32"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="33"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="34"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="35"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="36"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="37"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="38"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="39"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="40"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="41"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="42"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="43"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="44"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="45"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="46"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="47"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="48"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="49"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="50"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="51"></oval-sc:reference>
+                                    <oval-sc:reference item_ref="52"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.chrome:obj:205" version="1"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.chrome:obj:202" version="3">
+                                    <oval-sc:variable_value variable_id="oval:mil.disa.stig.chrome:var:200">SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome</oval-sc:variable_value>
+                                    <oval-sc:reference item_ref="53"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:203" version="2"></oval-sc:object>
+                        </oval-sc:collected_objects>
+                        <oval-sc:system_data>
+                              <win-sc:registry_item id="1" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132653256380000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Google Chrome</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="2" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{1C29817E-9438-4287-A35B-DF8F5F6175AC}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132463697510000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Intel® Manageability Commander 2.1.133</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="3" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{1F1C2DFC-2D24-3E06-BCB8-725134ADF989}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.4148</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="4" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{4B9E6EB0-0EED-4E74-9479-F982C3254F71}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053280000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server Browser for SQL Server 2012</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="5" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5D9ED403-94DE-3BA0-B1D6-71F4BDA412E6}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual C++ 2010  x86 Runtime - 10.0.40219</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="6" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{83F2B8F4-5CF3-4BE9-9772-9543EAE4AC5F}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2008 R2 Management Objects</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="7" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{8DECD307-938B-4FC9-A9F3-A63A991EAEE9}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131587716040000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Idera SQL XEvent Profiler</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="8" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{95120000-00B9-0409-0000-0000000FF1CE}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Application Error Reporting</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="9" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{9CCE40CE-A9E6-4916-8729-B008558EEF3F}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Report Viewer 2012 Runtime</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="10" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B7E38540-E355-3503-AFD7-635B2F2F76E1}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.4974</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="11" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{C3F6F200-6D7B-4879-B9EE-700C0CE1FCDA}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server System CLR Types</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="12" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{CFEF48A8-BFB8-3EAC-8BA5-DE4F8AA267CE}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft .NET Framework 4 Multi-Targeting Pack</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="13" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{D64B6984-242F-32BC-B008-752806E5FC44}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual Studio 2010 Shell (Isolated) - ENU</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="14" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{DC487E40-046E-42A9-9C7C-5D2B1A7EB211}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 Policies </win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="15" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F0C3E5D1-1ADE-321E-8167-68EF0DE699A5}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="16" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB3072779</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197920840000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Service Pack 3 for SQL Server 2012 (KB3072779) (64-bit)</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="17" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\KB4025925</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880054180000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Hotfix 6607 for SQL Server 2012 (KB4025925) (64-bit)</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="18" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft Help Viewer 1.1</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Help Viewer 1.1</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="19" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft SQL Server 11</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197916820000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 (64-bit)</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="20" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft SQL Server SQLServer2012</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197916820000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 (64-bit)</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="21" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{076FF390-D283-4174-B602-B0B7B72BD024}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 Transact-SQL ScriptDom </win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="22" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0EE81AFB-E870-4805-AFDB-F4325D8A5CC1}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft System CLR Types for SQL Server 2012 (x64)</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="23" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14656F93-0D33-4334-BE59-7E83C849930C}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053230000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 Native Client </win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="24" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{18B2A97C-92C3-4AC7-BE72-F823E0BC895B}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053800000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Database Engine Services</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="25" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{1D411379-9CE0-4B13-A19B-72D3222DD620}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Common Files</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="26" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{1D8E6291-B0D5-35EC-8441-6616F567A0F7}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="27" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{202AAF1F-69AA-442A-B59F-6B54B1AD07C6}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053310000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Common Files</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="28" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{203A1A10-9CC9-4253-8975-44C76A0C9C7B}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>VMware Tools</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="29" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{22BCA430-2A68-4678-9824-184F3839948F}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Integration Services</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="30" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{26BFF1F1-5C03-4C55-9C7C-FD65889AFA70}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Management Studio</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="31" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{34A7A77A-A23D-44ED-B3B6-EC8198BE2622}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053820000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Full text search</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="32" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{36BF5D42-BF68-4E0C-A165-A4C6E9841F4A}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053690000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Integration Services</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="33" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{3E0DD83F-BE4C-4478-86A0-AD0D79D1353E}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053270000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft VSS Writer for SQL Server 2012</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="34" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{3E36BD4A-8991-401B-95EA-CFE0AD8D51DB}-5.4_is1</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132664108150000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SCAP Compliance Checker 5.4</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="35" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{54FF8FAB-DE27-4187-82F1-EBAE6AEE869A}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053760000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Database Engine Shared</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="36" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{5FCE6D76-F5DC-37AB-B2B8-22AB8CEDB1D4}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="37" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{6603C2CE-3C54-4F1D-92F9-8390CD4CCCA8}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Database Engine Shared</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="38" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{662014D2-0450-37ED-ABAE-157C88127BEB}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Visual Studio 2010 Prerequisites - English</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="39" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{6B3840D6-4B8F-4E74-9202-9CE36DA94E99}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Client Tools</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="40" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7842C220-6E9A-4D5A-AE70-0E138271F883}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053960000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Client Tools</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="41" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{84FBCA4A-D650-4B0D-8094-EC0671FA9B91}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Database Engine Services</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="42" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{936FC22D-D283-4FD7-85EC-94DC270C0F54}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053700000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 RsFx Driver</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="43" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{A7037EB2-F953-4B12-B843-195F4D988DA1}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053900000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Management Studio</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="44" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B40EE88B-400A-4266-A17B-E3DE64E94431}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2008 Setup Support Files </win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="45" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{BED1EA3D-592D-4305-9D1F-20F03726EFC1}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Sql Server Customer Experience Improvement Program</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="46" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C0DDA4D7-5D9C-4D7C-9BF3-A81BF1E7278F}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053100000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 Setup (English)</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="47" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{D307B5CF-D1F0-48A4-8DA3-54765F535208}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053220000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 SQL Data Quality Common</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="48" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{DCCB1789-1DA0-4E3A-A52F-7815B602CC98}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053620000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Reporting Services</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="49" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{E41A73C2-E4B5-4784-BA67-3CB212BAB6E4}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131880053260000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft SQL Server 2012 Transact-SQL Compiler Service </win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="50" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{E5748D30-7E6D-3A8E-BFE6-C1D02C6DDABB}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Help Viewer 1.1</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="51" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{F14401A9-F0A0-33CC-8444-F60823A60DEB}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Microsoft Visual Studio Tools for Applications x64 Runtime 3.0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="52" status="exists">
+                                    <oval-sc:message level="info">value</oval-sc:message>
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{FCD81E1A-6ED6-4F19-A572-82FFE102654E}</win-sc:key>
+                                    <win-sc:name>DisplayName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131372002440000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>SQL Server 2012 Reporting Services</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="53" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome</win-sc:key>
+                                    <win-sc:name>DisplayVersion</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132653256380000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>90.0.4430.212</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                        </oval-sc:system_data>
+                  </oval-sc:oval_system_characteristics>
+            </oval-res:system>
+      </oval-res:results>
+</oval-res:oval_results>

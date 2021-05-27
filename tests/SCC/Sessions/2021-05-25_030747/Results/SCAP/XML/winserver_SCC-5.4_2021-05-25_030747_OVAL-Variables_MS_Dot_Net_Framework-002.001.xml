@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:OVAL Variables,StreamName:MS_Dot_Net_Framework-002.001,ErrorCount:0,WarnCount:0 -->
+
+<oval-var:oval_variables xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-variables-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-variables-schema.xsd" xmlns:oval-var="http://oval.mitre.org/XMLSchema/oval-variables-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <oval-var:generator>
+            <oval:product_name>SCAP Compliance Checker</oval:product_name>
+            <oval:product_version>5.4</oval:product_version>
+            <oval:schema_version>5.11.2</oval:schema_version>
+            <oval:timestamp>2021-05-25T03:07:59</oval:timestamp>
+      </oval-var:generator>
+</oval-var:oval_variables>

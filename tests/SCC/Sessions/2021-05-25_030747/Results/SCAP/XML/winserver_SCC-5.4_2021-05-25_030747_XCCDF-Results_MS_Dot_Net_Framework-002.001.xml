@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:XCCDF Results,StreamName:MS_Dot_Net_Framework-002.001,ErrorCount:0,WarnCount:0 -->
+
+<cdf:Benchmark id="xccdf_mil.disa.stig_benchmark_MS_Dot_Net_Framework" resolved="1" xsi:schemaLocation="http://checklists.nist.gov/xccdf/1.2 http://scap.nist.gov/schema/xccdf/1.2/xccdf_1.2.xsd http://cpe.mitre.org/dictionary/2.0 http://scap.nist.gov/schema/cpe/2.3/cpe-dictionary_2.3.xsd http://cpe.mitre.org/language/2.0 http://scap.nist.gov/schema/cpe/2.3/cpe-language_2.3.xsd" style="SCAP_1.2" xmlns:cdf="http://checklists.nist.gov/xccdf/1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <cdf:status date="2020-12-11">accepted</cdf:status>
+      <cdf:title>Microsoft DotNet Framework 4.0 Security Technical Implementation Guide</cdf:title>
+      <cdf:description>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</cdf:description>
+      <cdf:notice id="terms-of-use"></cdf:notice>
+      <cdf:front-matter></cdf:front-matter>
+      <cdf:rear-matter></cdf:rear-matter>
+      <cdf:reference href="https://cyber.mil">
+            <dc:publisher>DISA</dc:publisher>
+            <dc:source>STIG.DOD.MIL</dc:source>
+      </cdf:reference>
+      <cdf:plain-text id="release-info">Release: 2.1 Benchmark Date: 22 Jan 2021</cdf:plain-text>
+      <cdf:plain-text id="generator">3.2.1.41666</cdf:plain-text>
+      <cdf:plain-text id="conventionsVersion">1.10.0</cdf:plain-text>
+      <cdf:platform idref="cpe:/a:microsoft:.net_framework:4.0"></cdf:platform>
+      <cdf:version update="http://iase.disa.mil/stigs">002.001</cdf:version>
+      <cdf:metadata>
+            <dc:creator>DISA</dc:creator>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:contributor>DISA</dc:contributor>
+            <dc:source>STIG.DOD.MIL</dc:source>
+      </cdf:metadata>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-1_Classified">
+            <cdf:title>I - Mission Critical Classified</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-1_Public">
+            <cdf:title>I - Mission Critical Public</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-1_Sensitive">
+            <cdf:title>I - Mission Critical Sensitive</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-2_Classified">
+            <cdf:title>II - Mission Support Classified</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-2_Public">
+            <cdf:title>II - Mission Support Public</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-2_Sensitive">
+            <cdf:title>II - Mission Support Sensitive</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-3_Classified">
+            <cdf:title>III - Administrative Classified</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-3_Public">
+            <cdf:title>III - Administrative Public</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_MAC-3_Sensitive">
+            <cdf:title>III - Administrative Sensitive</cdf:title>
+            <cdf:description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</cdf:description>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225223"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225224"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225230"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225235"></cdf:select>
+            <cdf:select selected="true" idref="xccdf_mil.disa.stig_group_V-225238"></cdf:select>
+      </cdf:Profile>
+      <cdf:Profile id="xccdf_mil.disa.stig_profile_CAT_I_Only">
+            <cdf:title>CAT I Only</cdf:title>
+            <cdf:description>This profile only includes rules that are Severity Category I.</cdf:description>
+            <cdf:select selected="false" idref="xccdf_mil.disa.stig_rule_SV-225223r615940_rule"></cdf:select>
+            <cdf:select selected="false" idref="xccdf_mil.disa.stig_rule_SV-225224r615940_rule"></cdf:select>
+            <cdf:select selected="false" idref="xccdf_mil.disa.stig_rule_SV-225230r615940_rule"></cdf:select>
+            <cdf:select selected="false" idref="xccdf_mil.disa.stig_rule_SV-225235r615940_rule"></cdf:select>
+            <cdf:select selected="false" idref="xccdf_mil.disa.stig_rule_SV-225238r615940_rule"></cdf:select>
+      </cdf:Profile>
+      <cdf:Group Id="xccdf_mil.disa.stig_group_V-225223" id="xccdf_mil.disa.stig_group_V-225223">
+            <cdf:title>SRG-APP-000175</cdf:title>
+            <cdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</cdf:description>
+            <cdf:Rule Id="xccdf_mil.disa.stig_rule_SV-225223r615940_rule" id="xccdf_mil.disa.stig_rule_SV-225223r615940_rule" weight="10.0" severity="medium">
+                  <cdf:version update="http://iase.disa.mil/stigs">APPNET0031</cdf:version>
+                  <cdf:title>Digital signatures assigned to strongly named assemblies must be verified.</cdf:title>
+                  <cdf:description>&lt;VulnDiscussion&gt;A strong name consists of the assembly's identity, simple text name, version number, and culture information (if provided)—plus a public key and a digital signature.  Strong names serve to identify the author of the code.  If digital signatures used to sign strong name assemblies are not verified, any self signed code can be impersonated.  This can lead to a loss of system integrity. &lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</cdf:description>
+                  <cdf:reference>
+                        <dc:publisher>DISA</dc:publisher>
+                        <dc:identifier>4213</dc:identifier>
+                        <dc:type>DPMS Target</dc:type>
+                  </cdf:reference>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-7438</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-7055</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-000185</cdf:ident>
+                  <cdf:fixtext fixref="F-26910r467985_fix">Use regedit to remove the values stored in Windows registry key HKLM\Software\Microsoft\StrongName\Verification. There should be no assemblies or hash values listed under this registry key.
+
+All assemblies must require strong name verification in a production environment.
+
+Strong name assemblies that do not require verification in a development or test environment must have documented approvals from the IAO.</cdf:fixtext>
+                  <cdf:fix id="F-26910r467985_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:2" href="U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:Rule>
+      </cdf:Group>
+      <cdf:Group Id="xccdf_mil.disa.stig_group_V-225224" id="xccdf_mil.disa.stig_group_V-225224">
+            <cdf:title>SRG-APP-000175</cdf:title>
+            <cdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</cdf:description>
+            <cdf:Rule Id="xccdf_mil.disa.stig_rule_SV-225224r615940_rule" id="xccdf_mil.disa.stig_rule_SV-225224r615940_rule" weight="10.0" severity="medium">
+                  <cdf:version update="http://iase.disa.mil/stigs">APPNET0046</cdf:version>
+                  <cdf:title>The Trust Providers Software Publishing State must be set to 0x23C00.</cdf:title>
+                  <cdf:description>&lt;VulnDiscussion&gt;Microsoft Windows operating systems provide a feature called Authenticode.  Authenticode technology and its underlying code signing mechanisms serve to provide a structure to identify software publishers and ensure that software applications have not been tampered with.  Authenticode technology relies on digital certificates and is based on Public Key Cryptography Standards (PKCS) #7 (encrypted key specification), PKCS #10 (certificate request formats), X.509 (certificate specification), and Secure Hash Algorithm (SHA) and MD5 hash algorithms.
+
+The manner in which the Authenticode technology validates a certificate and determines what is considered a valid certificate can be modified to meet the mission of the Microsoft Windows system.  Each facade of certificate validation is controlled through the bits that makeup the hexadecimal value for the Authenticode setting.  An improper setting will allow non-valid certificates to be accepted and can put the integrity of the system into jeopardy.
+
+The hexadecimal value of 0x23C00 will implement the following certificate enforcement policy:
+- Trust the Test Root = FALSE
+- Use expiration date on certificates = TRUE
+- Check the revocation list = TRUE
+- Offline revocation server OK (Individual) = TRUE
+- Offline revocation server OK (Commercial) = TRUE
+- Java offline revocation server OK (Individual) = TRUE
+- Java offline revocation server OK (Commercial) = TRUE
+- Invalidate version 1 signed objects = FALSE
+- Check the revocation list on Time Stamp Signer = FALSE
+- Only trust items found in the Trust DB = FALSE&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</cdf:description>
+                  <cdf:reference>
+                        <dc:publisher>DISA</dc:publisher>
+                        <dc:identifier>4213</dc:identifier>
+                        <dc:type>DPMS Target</dc:type>
+                  </cdf:reference>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-7444</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-7061</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-000185</cdf:ident>
+                  <cdf:fixtext fixref="F-26911r467988_fix">This fix must be performed for each user on the system.
+
+Using regedit, change the hexadecimal value of the "HKEY_USER\[UNIQUE USER SID VALUE]\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing\State" registry key to 0x23C00.</cdf:fixtext>
+                  <cdf:fix id="F-26911r467988_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:15" href="U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:Rule>
+      </cdf:Group>
+      <cdf:Group Id="xccdf_mil.disa.stig_group_V-225230" id="xccdf_mil.disa.stig_group_V-225230">
+            <cdf:title>SRG-APP-000635</cdf:title>
+            <cdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</cdf:description>
+            <cdf:Rule Id="xccdf_mil.disa.stig_rule_SV-225230r615940_rule" id="xccdf_mil.disa.stig_rule_SV-225230r615940_rule" weight="10.0" severity="medium">
+                  <cdf:version update="http://iase.disa.mil/stigs">APPNET0062</cdf:version>
+                  <cdf:title>The .NET CLR must be configured to use FIPS approved encryption modules.</cdf:title>
+                  <cdf:description>&lt;VulnDiscussion&gt;FIPS encryption is configured via .NET configuration files.  There are numerous configuration files that affect different aspects of .Net behavior.  The .NET config files are described below.
+ 
+Machine Configuration Files:
+The machine configuration file, Machine.config, contains settings that apply to an entire computer. This file is located in the %SYSTEMROOT%\Microsoft.NET\Framework\v4.0.30319\Config directory for 32 bit .NET 4 installations and %SYSTEMROOT%\Microsoft.NET\Framework64\v4.0.30319\Config for 64 bit systems.   Machine.config contains configuration settings for machine-wide assembly binding, built-in remoting channels, and ASP.NET.
+
+Application Configuration Files:
+Application configuration files contain settings specific to an application. If checking these files, a .NET review of a specific .NET application is most likely being conducted. These files contain configuration settings that the Common Language Runtime reads (such as assembly binding policy, remoting objects, and so on), and settings that the application can read. 
+
+The name and location of the application configuration file depends on the application's host, which can be one of the following: 
+
+Executable–hosted application configuration files. 
+
+The configuration file for an application hosted by the executable host is in the same directory as the application. The name of the configuration file is the name of the application with a .config extension. For example, an application called myApp.exe can be associated with a configuration file called myApp.exe.config. 
+
+Internet Explorer-hosted application configuration files. 
+
+If an application hosted in Internet Explorer has a configuration file, the location of this file is specified in a &lt;link&gt; tag with the following syntax.
+
+&lt;link rel="ConfigurationFileName" href="location"&gt;
+
+In this tag, "location" represents a URL that point to the configuration file. This sets the application base. The configuration file must be located on the same web site as the application. 
+
+.NET 4.0 allows the CLR runtime to be configured to ignore FIPS encryption requirements.  If the CLR is not configured to use FIPS encryption modules, insecure encryption modules might be employed which could introduce an application confidentiality or integrity issue.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</cdf:description>
+                  <cdf:reference>
+                        <dc:publisher>DISA</dc:publisher>
+                        <dc:identifier>4213</dc:identifier>
+                        <dc:type>DPMS Target</dc:type>
+                  </cdf:reference>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-40966</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-30926</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-002450</cdf:ident>
+                  <cdf:fixtext fixref="F-26917r468006_fix">Examine the .NET CLR configuration files to find the runtime element and then the "enforceFIPSPolicy" element.
+
+Example:
+&lt;configuration&gt; 
+  &lt;runtime&gt; 
+                &lt;enforceFIPSPolicy enabled="true|false" /&gt;
+  &lt;/runtime&gt;
+&lt;/configuration&gt;
+
+Delete the "enforceFIPSPolicy" runtime element, change the setting to "true" or there must be documented IAO approvals for the FIPS setting.</cdf:fixtext>
+                  <cdf:fix id="F-26917r468006_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:9" href="U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:Rule>
+      </cdf:Group>
+      <cdf:Group Id="xccdf_mil.disa.stig_group_V-225235" id="xccdf_mil.disa.stig_group_V-225235">
+            <cdf:title>SRG-APP-000095</cdf:title>
+            <cdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</cdf:description>
+            <cdf:Rule Id="xccdf_mil.disa.stig_rule_SV-225235r615940_rule" id="xccdf_mil.disa.stig_rule_SV-225235r615940_rule" weight="10.0" severity="medium">
+                  <cdf:version update="http://iase.disa.mil/stigs">APPNET0067</cdf:version>
+                  <cdf:title>Event tracing for Windows (ETW) for Common Language Runtime events must be enabled.</cdf:title>
+                  <cdf:description>&lt;VulnDiscussion&gt;Event tracing captures information about applications utilizing the .NET CLR and the .NET CLR itself. This includes security oriented information, such as Strong Name and Authenticode verification.  
+
+Beginning with Windows Vista, ETW is enabled by default however, the .Net CLR and .Net applications can be configured to not utilize Event Tracing. If ETW event tracing is disabled, critical events that occurred within the runtime will not be captured in event logs.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</cdf:description>
+                  <cdf:reference>
+                        <dc:publisher>DISA</dc:publisher>
+                        <dc:identifier>4213</dc:identifier>
+                        <dc:type>DPMS Target</dc:type>
+                  </cdf:reference>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-41075</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-31026</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-000130</cdf:ident>
+                  <cdf:fixtext fixref="F-26922r468021_fix">Open Windows explorer and search for all .NET config files including application config files (*.exe.config).
+
+Examine the configuration settings for 
+&lt;etwEnable enabled="false" /&gt;.
+
+Enable ETW Tracing by setting the etwEnable flag to "true" or obtain documented IAO approvals.</cdf:fixtext>
+                  <cdf:fix id="F-26922r468021_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:12" href="U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:Rule>
+      </cdf:Group>
+      <cdf:Group Id="xccdf_mil.disa.stig_group_V-225238" id="xccdf_mil.disa.stig_group_V-225238">
+            <cdf:title>SRG-APP-000383</cdf:title>
+            <cdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</cdf:description>
+            <cdf:Rule Id="xccdf_mil.disa.stig_rule_SV-225238r615940_rule" id="xccdf_mil.disa.stig_rule_SV-225238r615940_rule" weight="10.0" severity="medium">
+                  <cdf:version update="http://iase.disa.mil/stigs">APPNET0075</cdf:version>
+                  <cdf:title>Disable TLS RC4 cipher in .Net</cdf:title>
+                  <cdf:description>&lt;VulnDiscussion&gt;Use of the RC4 cipher in TLS could allow an attacker to perform man-in-the-middle attacks and recover plaintext from encrypted sessions. Applications that target .Net version 4.x running on multiple Windows versions could be vulnerable to these types of attacks. The registry settings in this requirement will prevent .Net applications that target the 4.x framework from selecting and utilizing the Schannel.dll RC4 cipher for TLS connections. Applications that use TLS when connecting to remote systems will perform a handshake and negotiate the TLS version and cipher that is to be used between the client and the server. This is standard protocol for all TLS connections. If the server and client are not configured to use the same TLS version and cipher, the TLS connection may fail. Applications should be tested with these registry settings prior to production implementation of the fix in order to avoid application outages.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</cdf:description>
+                  <cdf:reference>
+                        <dc:publisher>DISA</dc:publisher>
+                        <dc:identifier>4213</dc:identifier>
+                        <dc:type>DPMS Target</dc:type>
+                  </cdf:reference>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-96209</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-81495</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-001762</cdf:ident>
+                  <cdf:fixtext fixref="F-26925r612667_fix">Use regedit to access the following registry key.
+
+For 32-bit systems:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319\
+
+For 64-bit systems: 
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319\
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319\
+
+Modify or create the following Windows registry value: SchUseStrongCrypto
+
+Set SchUseStrongCrypto to a REG_DWORD value of “1”.</cdf:fixtext>
+                  <cdf:fix id="F-26925r612667_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:16" href="U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:Rule>
+      </cdf:Group>
+      <cdf:TestResult start-time="2021-05-25T03:07:59" id="xccdf_mil.disa.stig_testresult_scap_mil.disa.stig_comp_U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-xccdf.xml---xccdf_mil.disa.stig_profile_MAC-1_Classified-1" test-system="cpe:/a:spawar:scc:5.4" version="002.001" end-time="2021-05-25T03:08:53">
+            <cdf:benchmark id="xccdf_mil.disa.stig_benchmark_MS_Dot_Net_Framework" href="#scap_mil.disa.stig_comp_U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-xccdf.xml"></cdf:benchmark>
+            <cdf:organization>NIWC Atlantic</cdf:organization>
+            <cdf:identity authenticated="true" privileged="true">BASE\ctrlb</cdf:identity>
+            <cdf:profile idref="xccdf_mil.disa.stig_profile_MAC-1_Classified"></cdf:profile>
+            <cdf:target>winserver</cdf:target>
+            <cdf:target-address>192.168.0.48</cdf:target-address>
+            <cdf:target-facts>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:host_name">winserver</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:domain">ad.local</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:fqdn">winserver.ad.local</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:os_name">Windows Server 2016 Standard</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:os_version">1607</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:processor">Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:processor_architecture">Intel64 Family 6 Model 60 Stepping 3</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:processor_mhz">3991</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:physical_memory">6144</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:manufacturer">VMware, Inc.</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:ein">VMware-42 3b 10 07 b2 dd 91 31-a4 ae 43 be 68 6f ff 5b</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:bios_version">6.00</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:model">VMware Virtual Platform</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:os_service_pack"></cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:interface_name">[00000000] Intel(R) 82574L Gigabit Network Connection</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:ipv4">192.168.0.48</cdf:fact>
+                  <cdf:fact type="string" name="urn:scap:fact:asset:identifier:mac">00:50:56:BB:A1:2B</cdf:fact>
+            </cdf:target-facts>
+            <cdf:target-id-ref name="SCC_winserver" system="http://scap.nist.gov/schema/asset-identification/1.1" href=""></cdf:target-id-ref>
+            <cdf:platform idref="cpe:/a:microsoft:.net_framework:4.0"></cdf:platform>
+            <cdf:rule-result weight="10.0" idref="xccdf_mil.disa.stig_rule_SV-225223r615940_rule" time="2021-05-25T03:07:59" version="APPNET0031" severity="medium">
+                  <cdf:result>pass</cdf:result>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-7438</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-7055</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-000185</cdf:ident>
+                  <cdf:fix id="F-26910r467985_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:2" href="#scap_mil.disa.stig_comp_U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:rule-result>
+            <cdf:rule-result weight="10.0" idref="xccdf_mil.disa.stig_rule_SV-225224r615940_rule" time="2021-05-25T03:07:59" version="APPNET0046" severity="medium">
+                  <cdf:result>pass</cdf:result>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-7444</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-7061</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-000185</cdf:ident>
+                  <cdf:fix id="F-26911r467988_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:15" href="#scap_mil.disa.stig_comp_U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:rule-result>
+            <cdf:rule-result weight="10.0" idref="xccdf_mil.disa.stig_rule_SV-225230r615940_rule" time="2021-05-25T03:07:59" version="APPNET0062" severity="medium">
+                  <cdf:result>pass</cdf:result>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-40966</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-30926</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-002450</cdf:ident>
+                  <cdf:fix id="F-26917r468006_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:9" href="#scap_mil.disa.stig_comp_U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:rule-result>
+            <cdf:rule-result weight="10.0" idref="xccdf_mil.disa.stig_rule_SV-225235r615940_rule" time="2021-05-25T03:08:51" version="APPNET0067" severity="medium">
+                  <cdf:result>pass</cdf:result>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-41075</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-31026</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-000130</cdf:ident>
+                  <cdf:fix id="F-26922r468021_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:12" href="#scap_mil.disa.stig_comp_U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:rule-result>
+            <cdf:rule-result weight="10.0" idref="xccdf_mil.disa.stig_rule_SV-225238r615940_rule" time="2021-05-25T03:08:53" version="APPNET0075" severity="medium">
+                  <cdf:result>fail</cdf:result>
+                  <cdf:ident system="http://cyber.mil/legacy">SV-96209</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/legacy">V-81495</cdf:ident>
+                  <cdf:ident system="http://cyber.mil/cci">CCI-001762</cdf:ident>
+                  <cdf:fix id="F-26925r612667_fix"></cdf:fix>
+                  <cdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+                        <cdf:check-content-ref name="oval:mil.disa.fso.dotnet:def:16" href="#scap_mil.disa.stig_comp_U_MS_DotNet_Framework_4-0_V2R1_STIG_SCAP_1-2_Benchmark-oval.xml"></cdf:check-content-ref>
+                  </cdf:check>
+            </cdf:rule-result>
+            <cdf:score maximum="100" system="urn:xccdf:scoring:spawar-adjusted">80</cdf:score>
+            <cdf:score maximum="100" system="urn:xccdf:scoring:spawar-original">80</cdf:score>
+            <cdf:score maximum="100" system="urn:xccdf:scoring:default">80</cdf:score>
+            <cdf:score maximum="50" system="urn:xccdf:scoring:flat">40</cdf:score>
+            <cdf:score maximum="5" system="urn:xccdf:scoring:flat-unweighted">4</cdf:score>
+            <cdf:score maximum="1" system="urn:xccdf:scoring:absolute">0</cdf:score>
+      </cdf:TestResult>
+</cdf:Benchmark>

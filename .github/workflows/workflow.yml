@@ -1,0 +1,20 @@
+
+name: Actions Workflow
+on: [push, pull_request]
+defaults:
+  run:
+    shell: pwsh
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # go to town with PowerShell
+      - name: ✅ Import stigtools and perform tests
+        run: |
+          Import-Module ./
+          $results = Invoke-Pester ./tests/Integration.Tests.ps1 -Output Detailed -PassThru
+          if ($results.Result -ne "Passed") {
+              throw "There were $($results.FailedCount) failed tests."
+          }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:OVAL CPE Results,StreamName:IE_11_STIG-001.015,ErrorCount:0,WarnCount:0 -->
+
+<oval-res:oval_results xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-results-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-results-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-system-characteristics-schema.xsd" xmlns:oval-res="http://oval.mitre.org/XMLSchema/oval-results-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:ind-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" xmlns:oval-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5" xmlns:ind-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:win-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows" xmlns:linux-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" xmlns:linux-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux">
+      <oval-res:generator>
+            <oval:product_name>SCAP Compliance Checker</oval:product_name>
+            <oval:product_version>5.4</oval:product_version>
+            <oval:schema_version>5.11.2</oval:schema_version>
+            <oval:timestamp>2021-05-25T03:07:51</oval:timestamp>
+      </oval-res:generator>
+      <oval-res:directives>
+            <oval-res:definition_true content="full" reported="true"></oval-res:definition_true>
+            <oval-res:definition_false content="full" reported="true"></oval-res:definition_false>
+            <oval-res:definition_unknown content="full" reported="true"></oval-res:definition_unknown>
+            <oval-res:definition_error content="full" reported="true"></oval-res:definition_error>
+            <oval-res:definition_not_evaluated content="full" reported="true"></oval-res:definition_not_evaluated>
+            <oval-res:definition_not_applicable content="full" reported="true"></oval-res:definition_not_applicable>
+      </oval-res:directives>
+      <oval-def:oval_definitions>
+            <oval-def:generator>
+                  <oval:product_name>repotool</oval:product_name>
+                  <oval:schema_version>5.10</oval:schema_version>
+                  <oval:timestamp>2020-06-26T17:37:53</oval:timestamp>
+            </oval-def:generator>
+            <oval-def:definitions>
+                  <oval-def:definition id="oval:mil.disa.fso.ie:def:18343" class="inventory" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Microsoft Internet Explorer 11</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Internet Explorer 11</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:reference source="CPE" ref_id="cpe:/a:microsoft:internet_explorer:11"></oval-def:reference>
+                              <oval-def:description>A version of Microsoft Internet Explorer 11 is installed.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Internet Explorer 11 is installed" test_ref="oval:mil.disa.fso.ie:tst:87142"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+            </oval-def:definitions>
+            <oval-def:tests>
+                  <win-def:registry_test check="at least one" comment="Internet Explorer 11 is installed" check_existence="at_least_one_exists" id="oval:mil.disa.fso.ie:tst:87142" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.ie:obj:23453"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.ie:ste:24230"></win-def:state>
+                  </win-def:registry_test>
+            </oval-def:tests>
+            <oval-def:objects>
+                  <win-def:registry_object id="oval:mil.disa.fso.ie:obj:23453" version="2">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Microsoft\Internet Explorer</win-def:key>
+                        <win-def:name>svcVersion</win-def:name>
+                  </win-def:registry_object>
+            </oval-def:objects>
+            <oval-def:states>
+                  <win-def:registry_state comment="State matches if Microsoft Internet Explorer 11 is installed" id="oval:mil.disa.fso.ie:ste:24230" version="1">
+                        <win-def:value operation="pattern match">^11\..*$</win-def:value>
+                  </win-def:registry_state>
+            </oval-def:states>
+      </oval-def:oval_definitions>
+      <oval-res:results>
+            <oval-res:system>
+                  <oval-res:definitions>
+                        <oval-res:definition result="true" definition_id="oval:mil.disa.fso.ie:def:18343" version="4">
+                              <oval-res:criteria applicability_check="false" result="true" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="true" version="1" test_ref="oval:mil.disa.fso.ie:tst:87142"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                  </oval-res:definitions>
+                  <oval-res:tests>
+                        <oval-res:test check="at least one" result="true" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.ie:tst:87142" version="1" state_operator="AND">
+                              <oval-res:tested_item item_id="1" result="true"></oval-res:tested_item>
+                        </oval-res:test>
+                  </oval-res:tests>
+                  <oval-sc:oval_system_characteristics>
+                        <oval-sc:generator>
+                              <oval:product_name>SCAP Compliance Checker</oval:product_name>
+                              <oval:product_version>5.4</oval:product_version>
+                              <oval:schema_version>5.11.2</oval:schema_version>
+                              <oval:timestamp>2021-05-25T03:07:51</oval:timestamp>
+                        </oval-sc:generator>
+                        <oval-sc:system_info>
+                              <oval-sc:os_name>Windows Server 2016 Standard</oval-sc:os_name>
+                              <oval-sc:os_version>1607</oval-sc:os_version>
+                              <oval-sc:architecture>Intel64 Family 6 Model 60 Stepping 3</oval-sc:architecture>
+                              <oval-sc:primary_host_name>winserver</oval-sc:primary_host_name>
+                              <oval-sc:interfaces>
+                                    <oval-sc:interface>
+                                          <oval-sc:interface_name>[00000000] Intel(R) 82574L Gigabit Network Connection</oval-sc:interface_name>
+                                          <oval-sc:ip_address>192.168.0.48</oval-sc:ip_address>
+                                          <oval-sc:mac_address>00:50:56:BB:A1:2B</oval-sc:mac_address>
+                                    </oval-sc:interface>
+                              </oval-sc:interfaces>
+                              <__NS1:asset-identification xmlns:__NS1="http://scap.nist.gov/schema/scap/constructs/1.2">
+                                    <__NS2:object-ref ref-id="SCC_winserver" xmlns:__NS2="http://scap.nist.gov/schema/asset-reporting-format/1.1" />
+                              </__NS1:asset-identification>
+                        </oval-sc:system_info>
+                        <oval-sc:collected_objects>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.ie:obj:23453" version="2">
+                                    <oval-sc:reference item_ref="1"></oval-sc:reference>
+                              </oval-sc:object>
+                        </oval-sc:collected_objects>
+                        <oval-sc:system_data>
+                              <win-sc:registry_item id="1" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Internet Explorer</win-sc:key>
+                                    <win-sc:name>svcVersion</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132632672490000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>11.4350.14393.0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                        </oval-sc:system_data>
+                  </oval-sc:oval_system_characteristics>
+            </oval-res:system>
+      </oval-res:results>
+</oval-res:oval_results>

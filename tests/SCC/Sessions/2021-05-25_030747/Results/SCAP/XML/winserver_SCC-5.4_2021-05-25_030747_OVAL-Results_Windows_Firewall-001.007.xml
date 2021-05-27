@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:OVAL Results,StreamName:Windows_Firewall-001.007,ErrorCount:0,WarnCount:0 -->
+
+<oval-res:oval_results xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-results-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-results-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-system-characteristics-schema.xsd" xmlns:oval-res="http://oval.mitre.org/XMLSchema/oval-results-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:ind-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" xmlns:oval-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5" xmlns:ind-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:win-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows" xmlns:linux-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" xmlns:linux-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux">
+      <oval-res:generator>
+            <oval:product_name>SCAP Compliance Checker</oval:product_name>
+            <oval:product_version>5.4</oval:product_version>
+            <oval:schema_version>5.11.2</oval:schema_version>
+            <oval:timestamp>2021-05-25T03:09:05</oval:timestamp>
+      </oval-res:generator>
+      <oval-res:directives>
+            <oval-res:definition_true content="full" reported="true"></oval-res:definition_true>
+            <oval-res:definition_false content="full" reported="true"></oval-res:definition_false>
+            <oval-res:definition_unknown content="full" reported="true"></oval-res:definition_unknown>
+            <oval-res:definition_error content="full" reported="true"></oval-res:definition_error>
+            <oval-res:definition_not_evaluated content="full" reported="true"></oval-res:definition_not_evaluated>
+            <oval-res:definition_not_applicable content="full" reported="true"></oval-res:definition_not_applicable>
+      </oval-res:directives>
+      <oval-def:oval_definitions>
+            <oval-def:generator>
+                  <oval:product_name>repotool</oval:product_name>
+                  <oval:schema_version>5.10</oval:schema_version>
+                  <oval:timestamp>2018-06-22T15:35:40</oval:timestamp>
+            </oval-def:generator>
+            <oval-def:definitions>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4798" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Firewall state - Domain Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Firewall state - Domain Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false" operator="OR">
+                              <oval-def:criteria applicability_check="false">
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!EnableFirewall non existent" test_ref="oval:mil.disa.fso.windows:tst:479802"></oval-def:criterion>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile!EnableFirewall value equals variable" test_ref="oval:mil.disa.fso.windows:tst:479801"></oval-def:criterion>
+                              </oval-def:criteria>
+                              <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!EnableFirewall value equals variable" test_ref="oval:mil.disa.fso.windows:tst:479800"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4799" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Firewall state - Private Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Firewall state - Private Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false" operator="OR">
+                              <oval-def:criteria applicability_check="false">
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!EnableFirewall non existent" test_ref="oval:mil.disa.fso.windows:tst:479902"></oval-def:criterion>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile!EnableFirewall value equals variable" test_ref="oval:mil.disa.fso.windows:tst:479901"></oval-def:criterion>
+                              </oval-def:criteria>
+                              <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!EnableFirewall value equals variable" test_ref="oval:mil.disa.fso.windows:tst:479900"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4800" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Firewall state - Public Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Firewall state - Public Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false" operator="OR">
+                              <oval-def:criteria applicability_check="false">
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!EnableFirewall non existent" test_ref="oval:mil.disa.fso.windows:tst:480002"></oval-def:criterion>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!EnableFirewall value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480001"></oval-def:criterion>
+                              </oval-def:criteria>
+                              <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!EnableFirewall value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480000"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4801" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Inbound Connections - Domain Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Inbound Connections - Domain Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4798"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="defaultinboundaction non existent" test_ref="oval:mil.disa.fso.windows:tst:480102"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile!DefaultInboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480101"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultInboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480100"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4802" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Outbound Connections - Domain Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Outbound Connections - Domain Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4798"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultOutboundAction non existent" test_ref="oval:mil.disa.fso.windows:tst:480202"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile!DefaultOutboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480201"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultOutboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480200"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4806" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Size Limit</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The log file size limit for the Windows Firewall should be configured correctly for the Domain Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4798"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogFileSize non existent" test_ref="oval:mil.disa.fso.windows:tst:480602"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging value is greater than or equal to variable" test_ref="oval:mil.disa.fso.windows:tst:480601"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogFileSize value is greater than or equal to variable" test_ref="oval:mil.disa.fso.windows:tst:480600"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4807" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Log Dropped Packets</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The "Log Dropped Packets" option for the Windows Firewall should be configured correctly for the Domain Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4798"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogDroppedPackets value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480701"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogDroppedPackets non existent" test_ref="oval:mil.disa.fso.windows:tst:480702"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogDroppedPackets value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480700"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4808" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Logged Successful Connections</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The "Log Successful Connections" option for the Windows Firewall should be configured correctly for the Domain Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4798"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogSuccessfulConnections non existent" test_ref="oval:mil.disa.fso.windows:tst:480802"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogSuccessfulConnections value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480801"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogSuccessfulConnections value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480800"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4809" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Inbound Connections - Private Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Inbound Connections - Private Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4799"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultInboundAction non existent" test_ref="oval:mil.disa.fso.windows:tst:480902"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile!DefaultInboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480901"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultInboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:480900"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4810" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Outbound Connections - Private Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Outbound Connections - Private Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4799"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultOutboundAction non existent" test_ref="oval:mil.disa.fso.windows:tst:481002"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481001"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultOutboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481000"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4814" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Size Limit</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The log file size limit for the Windows Firewall should be configured correctly for the Private Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4799"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogFileSize non existent" test_ref="oval:mil.disa.fso.windows:tst:481402"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging!LogFileSize value is greater than or equal to variable" test_ref="oval:mil.disa.fso.windows:tst:481401"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogFileSize value is greater than or equal to variable" test_ref="oval:mil.disa.fso.windows:tst:481400"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4815" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Log Dropped Packets</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The "Log Dropped Packets" option for the Windows Firewall should be configured correctly for the Private Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4799"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogDroppedPackets non existent" test_ref="oval:mil.disa.fso.windows:tst:481502"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging" test_ref="oval:mil.disa.fso.windows:tst:481501"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogDroppedPackets value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481500"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4816" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Logged Successful Connections</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The "Log Successful Connections" option for the Windows Firewall should be configured correctly for the Private Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4799"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogSuccessfulConnections non existent" test_ref="oval:mil.disa.fso.windows:tst:481602"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging!LogSuccessfulConnections value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481601"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogSuccessfulConnections value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481600"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4817" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Inbound Connections - Public Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Inbound Connections - Public Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4800"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultInboundAction non existent" test_ref="oval:mil.disa.fso.windows:tst:481702"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!DefaultInboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481701"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultInboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481700"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4818" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Outbound Connections - Public Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Outbound Connections - Public Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4800"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultOutboundAction non existent" test_ref="oval:mil.disa.fso.windows:tst:481802"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!DefaultOutboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481801"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultOutboundAction value equals variable" test_ref="oval:mil.disa.fso.windows:tst:481800"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4821" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Apply Local Firewall Rules - Public Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Apply Local Firewall Rules - Public Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4800"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!AllowLocalPolicyMerge value equals variable" test_ref="oval:mil.disa.fso.windows:tst:482100"></oval-def:criterion>
+                                    <oval-def:criterion applicability_check="false" comment="System is not a member of a domain" test_ref="oval:mil.disa.fso.windows:tst:482101"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4822" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Apply Local Connection Security Rules - Public Profile</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Apply Local Connection Security Rules - Public Profile</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4800"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!AllowLocalIPsecPolicyMerge value equals variable" test_ref="oval:mil.disa.fso.windows:tst:482200"></oval-def:criterion>
+                                    <oval-def:criterion applicability_check="false" comment="System is not a member of a domain" test_ref="oval:mil.disa.fso.windows:tst:482101"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4824" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Size Limit</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The log file size limit for the Windows Firewall should be configured correctly for the Public Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4800"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogFileSize non existent" test_ref="oval:mil.disa.fso.windows:tst:482402"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogFileSize!LogFileSize value is greater than or equal to variable" test_ref="oval:mil.disa.fso.windows:tst:482401"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogFileSize value is greater than or equal to variable" test_ref="oval:mil.disa.fso.windows:tst:482400"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4825" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Log Dropped Packets</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The "Log Dropped Packets" option for the Windows Firewall should be configured correctly for the Public Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4800"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogDroppedPackets non existent" test_ref="oval:mil.disa.fso.windows:tst:482502"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogDroppedPackets value equals variable" test_ref="oval:mil.disa.fso.windows:tst:482501"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogDroppedPackets value equals variable" test_ref="oval:mil.disa.fso.windows:tst:482500"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.fso.windows:def:4826" class="compliance" version="4">
+                        <oval-def:metadata>
+                              <oval-def:title>Logged Successful Connections</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>The "Log Successful Connections" option for the Windows Firewall should be configured correctly for the Public Profile.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:extend_definition applicability_check="false" definition_ref="oval:mil.disa.fso.windows:def:4800"></oval-def:extend_definition>
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false">
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogSuccessfulConnections non existent" test_ref="oval:mil.disa.fso.windows:tst:482602"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogSuccessfulConnections value equals variable" test_ref="oval:mil.disa.fso.windows:tst:482601"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogSuccessfulConnections value equals variable" test_ref="oval:mil.disa.fso.windows:tst:482600"></oval-def:criterion>
+                              </oval-def:criteria>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+            </oval-def:definitions>
+            <oval-def:tests>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!EnableFirewall value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:479800" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:479800"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:479800"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile!EnableFirewall value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:479801" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:479801"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:479800"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!EnableFirewall non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:479802" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:479800"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!EnableFirewall value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:479900" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:479900"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:479900"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile!EnableFirewall value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:479901" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:479901"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:479900"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!EnableFirewall non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:479902" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:479900"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!EnableFirewall value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480000" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480000"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480000"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!EnableFirewall value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480001" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480001"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480000"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:480002" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480000"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultInboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480100" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480100"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480100"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultInboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480101" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480101"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480100"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="defaultinboundaction non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:480102" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480100"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultOutboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480200" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480200"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480200"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile!DefaultOutboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480201" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480201"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480200"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultOutboundAction non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:480202" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480200"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480600" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480600"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480600"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480601" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480601"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480600"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:480602" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480600"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogDroppedPackets value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480700" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480700"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480700"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogDroppedPackets value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480701" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480701"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480700"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogDroppedPackets non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:480702" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480700"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogSuccessfulConnections value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480800" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480800"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480800"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogSuccessfulConnections value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480801" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480801"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480800"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogSuccessfulConnections non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:480802" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480800"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultInboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480900" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480900"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480900"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile!DefaultInboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:480901" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480901"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:480900"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultInboundAction non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:480902" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:480900"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultOutboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481000" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481000"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481000"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultOutboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481001" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481001"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481000"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultOutboundAction value equals variable" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:481002" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481000"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481400" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481400"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481400"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481401" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481401"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481400"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:481402" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481400"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogDroppedPackets value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481500" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481500"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481500"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging!LogDroppedPackets value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481501" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481501"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481500"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogDroppedPackets non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:481502" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481500"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogSuccessfulConnections value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481600" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481600"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481600"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging!LogSuccessfulConnections value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481601" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481601"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481600"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogSuccessfulConnections non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:481602" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481600"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultInboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481700" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481700"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481700"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!DefaultInboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481701" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481701"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481700"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultInboundAction value equals variable" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:481702" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481700"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultOutboundAction value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481800" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481800"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481800"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:481801" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481801"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:481800"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultOutboundAction non existent" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:481802" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:481800"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!AllowLocalPolicyMerge value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482100" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482100"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482100"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Registry value to determine domain membership." check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482101" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482101"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482101"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!AllowLocalIPsecPolicyMerge value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482200" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482200"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482200"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482400" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482400"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482400"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482401" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482401"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482400"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogFileSize value is greater than or equal to variable" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:482402" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482400"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogDroppedPackets value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482500" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482500"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482500"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogDroppedPackets value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482501" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482501"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482500"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogDroppedPackets value equals variable" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:482502" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482500"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogSuccessfulConnections value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482600" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482600"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482600"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogSuccessfulConnections value equals variable" check_existence="at_least_one_exists" id="oval:mil.disa.fso.windows:tst:482601" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482601"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.fso.windows:ste:482600"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogSuccessfulConnections value equals variable" check_existence="none_exist" id="oval:mil.disa.fso.windows:tst:482602" version="3" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.fso.windows:obj:482600"></win-def:object>
+                  </win-def:registry_test>
+            </oval-def:tests>
+            <oval-def:objects>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!EnableFirewall" id="oval:mil.disa.fso.windows:obj:479800" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile</win-def:key>
+                        <win-def:name>EnableFirewall</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile!EnableFirewall" id="oval:mil.disa.fso.windows:obj:479801" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile</win-def:key>
+                        <win-def:name>EnableFirewall</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!EnableFirewall" id="oval:mil.disa.fso.windows:obj:479900" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile</win-def:key>
+                        <win-def:name>EnableFirewall</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile!EnableFirewall" id="oval:mil.disa.fso.windows:obj:479901" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile</win-def:key>
+                        <win-def:name>EnableFirewall</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!EnableFirewall" id="oval:mil.disa.fso.windows:obj:480000" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile</win-def:key>
+                        <win-def:name>EnableFirewall</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!EnableFirewall" id="oval:mil.disa.fso.windows:obj:480001" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile</win-def:key>
+                        <win-def:name>EnableFirewall</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultInboundAction" id="oval:mil.disa.fso.windows:obj:480100" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile</win-def:key>
+                        <win-def:name>DefaultInboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultInboundAction" id="oval:mil.disa.fso.windows:obj:480101" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile</win-def:key>
+                        <win-def:name>DefaultInboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile!DefaultOutboundAction" id="oval:mil.disa.fso.windows:obj:480200" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile</win-def:key>
+                        <win-def:name>DefaultOutboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile!DefaultOutboundAction" id="oval:mil.disa.fso.windows:obj:480201" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile</win-def:key>
+                        <win-def:name>DefaultOutboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogFileSize" id="oval:mil.disa.fso.windows:obj:480600" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging</win-def:key>
+                        <win-def:name>LogFileSize</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogFileSize" id="oval:mil.disa.fso.windows:obj:480601" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging</win-def:key>
+                        <win-def:name>LogFileSize</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogDroppedPackets" id="oval:mil.disa.fso.windows:obj:480700" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging</win-def:key>
+                        <win-def:name>LogDroppedPackets</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogDroppedPackets" id="oval:mil.disa.fso.windows:obj:480701" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging</win-def:key>
+                        <win-def:name>LogDroppedPackets</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging!LogSuccessfulConnections" id="oval:mil.disa.fso.windows:obj:480800" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging</win-def:key>
+                        <win-def:name>LogSuccessfulConnections</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging!LogSuccessfulConnections" id="oval:mil.disa.fso.windows:obj:480801" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging</win-def:key>
+                        <win-def:name>LogSuccessfulConnections</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultInboundAction" id="oval:mil.disa.fso.windows:obj:480900" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile</win-def:key>
+                        <win-def:name>DefaultInboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile" id="oval:mil.disa.fso.windows:obj:480901" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile</win-def:key>
+                        <win-def:name>DefaultInboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile!DefaultOutboundAction" id="oval:mil.disa.fso.windows:obj:481000" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile</win-def:key>
+                        <win-def:name>DefaultOutboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile!DefaultOutboundAction" id="oval:mil.disa.fso.windows:obj:481001" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile</win-def:key>
+                        <win-def:name>DefaultOutboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogFileSize" id="oval:mil.disa.fso.windows:obj:481400" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging</win-def:key>
+                        <win-def:name>LogFileSize</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging!LogFileSize" id="oval:mil.disa.fso.windows:obj:481401" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging</win-def:key>
+                        <win-def:name>LogFileSize</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogDroppedPackets" id="oval:mil.disa.fso.windows:obj:481500" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging</win-def:key>
+                        <win-def:name>LogDroppedPackets</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging!LogDroppedPackets" id="oval:mil.disa.fso.windows:obj:481501" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging</win-def:key>
+                        <win-def:name>LogDroppedPackets</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging!LogSuccessfulConnections" id="oval:mil.disa.fso.windows:obj:481600" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging</win-def:key>
+                        <win-def:name>LogSuccessfulConnections</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging" id="oval:mil.disa.fso.windows:obj:481601" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging</win-def:key>
+                        <win-def:name>LogSuccessfulConnections</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultInboundAction" id="oval:mil.disa.fso.windows:obj:481700" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile</win-def:key>
+                        <win-def:name>DefaultInboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!DefaultInboundAction" id="oval:mil.disa.fso.windows:obj:481701" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile</win-def:key>
+                        <win-def:name>DefaultInboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!DefaultOutboundAction" id="oval:mil.disa.fso.windows:obj:481800" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile</win-def:key>
+                        <win-def:name>DefaultOutboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile!DefaultOutboundAction" id="oval:mil.disa.fso.windows:obj:481801" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile</win-def:key>
+                        <win-def:name>DefaultOutboundAction</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!AllowLocalPolicyMerge" id="oval:mil.disa.fso.windows:obj:482100" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile</win-def:key>
+                        <win-def:name>AllowLocalPolicyMerge</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="Registry path to determine domain membership." id="oval:mil.disa.fso.windows:obj:482101" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>System\CurrentControlSet\Services\TCPIP\Parameters</win-def:key>
+                        <win-def:name>Domain</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile!AllowLocalIPsecPolicyMerge" id="oval:mil.disa.fso.windows:obj:482200" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile</win-def:key>
+                        <win-def:name>AllowLocalIPsecPolicyMerge</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogFileSize" id="oval:mil.disa.fso.windows:obj:482400" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging</win-def:key>
+                        <win-def:name>LogFileSize</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogFileSize" id="oval:mil.disa.fso.windows:obj:482401" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging</win-def:key>
+                        <win-def:name>LogFileSize</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogDroppedPackets" id="oval:mil.disa.fso.windows:obj:482500" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging</win-def:key>
+                        <win-def:name>LogDroppedPackets</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging!LogDroppedPackets" id="oval:mil.disa.fso.windows:obj:482501" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging</win-def:key>
+                        <win-def:name>LogDroppedPackets</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging!LogSuccessfulConnections" id="oval:mil.disa.fso.windows:obj:482600" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging</win-def:key>
+                        <win-def:name>LogSuccessfulConnections</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging" id="oval:mil.disa.fso.windows:obj:482601" version="3">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging</win-def:key>
+                        <win-def:name>LogSuccessfulConnections</win-def:name>
+                  </win-def:registry_object>
+            </oval-def:objects>
+            <oval-def:states>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:479800" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:479800"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:479900" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:479900"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:480000" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:480000"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:480100" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:480100"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:480200" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:480200"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value is greater than or equal to variable" id="oval:mil.disa.fso.windows:ste:480600" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" operation="greater than or equal" var_ref="oval:mil.disa.fso.windows:var:480600"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:480700" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:480700"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:480800" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:480800"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:480900" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:480900"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:481000" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:481000"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value is greater than or equal to variable" id="oval:mil.disa.fso.windows:ste:481400" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" operation="greater than or equal" var_ref="oval:mil.disa.fso.windows:var:481400"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:481500" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:481500"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:481600" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:481600"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:481700" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:481700"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:481800" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:481800"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:482100" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:482100"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Reg_Sz type and blank value" id="oval:mil.disa.fso.windows:ste:482101" version="3">
+                        <win-def:type>reg_sz</win-def:type>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:482200" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:482200"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value is greater than or equal to variable" id="oval:mil.disa.fso.windows:ste:482400" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" operation="greater than or equal" var_ref="oval:mil.disa.fso.windows:var:482400"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:482500" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:482500"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value equals variable" id="oval:mil.disa.fso.windows:ste:482600" version="3">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int" var_ref="oval:mil.disa.fso.windows:var:482600"></win-def:value>
+                  </win-def:registry_state>
+            </oval-def:states>
+            <oval-def:variables>
+                  <oval-def:external_variable datatype="int" comment="Firewall state - Domain Profile" id="oval:mil.disa.fso.windows:var:479800" version="3">
+                        <oval-def:possible_value hint="off">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="on">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Firewall state - Private Profile" id="oval:mil.disa.fso.windows:var:479900" version="3">
+                        <oval-def:possible_value hint="off">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="on">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Firewall state - Public Profile" id="oval:mil.disa.fso.windows:var:480000" version="3">
+                        <oval-def:possible_value hint="off">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="on">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Inbound Connections - Domain Profile" id="oval:mil.disa.fso.windows:var:480100" version="3">
+                        <oval-def:possible_value hint="allow">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="block">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Outbound Connections - Domain Profile" id="oval:mil.disa.fso.windows:var:480200" version="3">
+                        <oval-def:possible_value hint="allow">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="block">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Size Limit - Domain Profile" id="oval:mil.disa.fso.windows:var:480600" version="3">
+                        <oval-def:possible_value hint="16384_kb">16384</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Log Dropped Packets - Domain Profile" id="oval:mil.disa.fso.windows:var:480700" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Logged Successful Connections - Domain Profile" id="oval:mil.disa.fso.windows:var:480800" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Inbound Connections - Private Profile" id="oval:mil.disa.fso.windows:var:480900" version="3">
+                        <oval-def:possible_value hint="allow">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="block">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Outbound Connections - Private Profile" id="oval:mil.disa.fso.windows:var:481000" version="3">
+                        <oval-def:possible_value hint="allow">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="block">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Size Limit - Private Profile" id="oval:mil.disa.fso.windows:var:481400" version="3">
+                        <oval-def:possible_value hint="16384_kb">16384</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Log Dropped Packets - Private Profile" id="oval:mil.disa.fso.windows:var:481500" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Logged Successful Connections - Private Profile" id="oval:mil.disa.fso.windows:var:481600" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Inbound Connections - Public Profile" id="oval:mil.disa.fso.windows:var:481700" version="3">
+                        <oval-def:possible_value hint="allow">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="block">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Outbound Connections - Public Profile" id="oval:mil.disa.fso.windows:var:481800" version="3">
+                        <oval-def:possible_value hint="allow">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="block">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Apply Local Firewall Rules - Public Profile" id="oval:mil.disa.fso.windows:var:482100" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Apply Local Connection Security Rules - Public Profile" id="oval:mil.disa.fso.windows:var:482200" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Size Limit - Public Profile" id="oval:mil.disa.fso.windows:var:482400" version="3">
+                        <oval-def:possible_value hint="16384_kb">16384</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Log Dropped Packets - Public Profile" id="oval:mil.disa.fso.windows:var:482500" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+                  <oval-def:external_variable datatype="int" comment="Logged Successful Connections - Public Profile" id="oval:mil.disa.fso.windows:var:482600" version="3">
+                        <oval-def:possible_value hint="no">0</oval-def:possible_value>
+                        <oval-def:possible_value hint="yes">1</oval-def:possible_value>
+                  </oval-def:external_variable>
+            </oval-def:variables>
+      </oval-def:oval_definitions>
+      <oval-res:results>
+            <oval-res:system>
+                  <oval-res:definitions>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4798" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                          <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:479802"></oval-res:criterion>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:479801"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:479800"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="true" definition_id="oval:mil.disa.fso.windows:def:4799" version="4">
+                              <oval-res:criteria applicability_check="false" result="true" operator="OR">
+                                    <oval-res:criteria applicability_check="false" result="true" operator="AND">
+                                          <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:479902"></oval-res:criterion>
+                                          <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:479901"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:479900"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="true" definition_id="oval:mil.disa.fso.windows:def:4800" version="4">
+                              <oval-res:criteria applicability_check="false" result="true" operator="OR">
+                                    <oval-res:criteria applicability_check="false" result="true" operator="AND">
+                                          <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480002"></oval-res:criterion>
+                                          <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480001"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480000"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4801" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480102"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480101"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480100"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="false" definition_ref="oval:mil.disa.fso.windows:def:4798" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4802" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480202"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480201"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480200"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="false" definition_ref="oval:mil.disa.fso.windows:def:4798" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4806" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480602"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480601"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480600"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="false" definition_ref="oval:mil.disa.fso.windows:def:4798" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4807" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480701"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480702"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480700"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="false" definition_ref="oval:mil.disa.fso.windows:def:4798" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4808" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480802"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480801"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480800"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="false" definition_ref="oval:mil.disa.fso.windows:def:4798" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4809" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:480902"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480901"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:480900"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4799" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4810" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:481002"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481001"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481000"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4799" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4814" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:481402"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481401"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481400"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4799" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4815" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:481502"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481501"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481500"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4799" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4816" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:481602"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481601"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481600"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4799" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4817" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:481702"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481701"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481700"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4800" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4818" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:481802"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481801"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:481800"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4800" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4821" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482100"></oval-res:criterion>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482101"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4800" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4822" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482200"></oval-res:criterion>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482101"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4800" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4824" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:482402"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482401"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482400"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4800" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4825" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:482502"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482501"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482500"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4800" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.fso.windows:def:4826" version="4">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="true" version="3" test_ref="oval:mil.disa.fso.windows:tst:482602"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482601"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="false" version="3" test_ref="oval:mil.disa.fso.windows:tst:482600"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:extend_definition applicability_check="false" result="true" definition_ref="oval:mil.disa.fso.windows:def:4800" version="4"></oval-res:extend_definition>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                  </oval-res:definitions>
+                  <oval-res:tests>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:479802" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:479801" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="1" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:479800">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:479800" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:479800">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:479902" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:479901" version="3" state_operator="AND">
+                              <oval-res:tested_item item_id="2" result="true"></oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:479900">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:479900" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:479900">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:480002" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480001" version="3" state_operator="AND">
+                              <oval-res:tested_item item_id="3" result="true"></oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480000">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480000" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480000">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:480102" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480101" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480100">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480100" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480100">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:480202" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480201" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480200">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480200" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480200">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:480602" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480601" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="4" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480600">16384</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480600" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480600">16384</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480701" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="5" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480700">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:480702" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480700" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480700">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:480802" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480801" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="6" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480800">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480800" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480800">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:480902" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480901" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480900">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:480900" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:480900">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:481002" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481001" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481000">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481000" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481000">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:481402" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481401" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="7" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481400">16384</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481400" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481400">16384</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:481502" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481501" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="8" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481500">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481500" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481500">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:481602" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481601" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="9" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481600">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481600" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481600">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:481702" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481701" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481700">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481700" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481700">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:481802" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481801" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481800">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:481800" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:481800">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482100" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482100">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482101" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="10" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482200" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482200">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:482402" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482401" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="11" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482400">16384</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482400" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482400">16384</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:482502" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482501" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="12" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482500">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482500" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482500">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.fso.windows:tst:482602" version="3" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482601" version="3" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="13" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482600">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.fso.windows:tst:482600" version="3" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.fso.windows:var:482600">1</oval-res:tested_variable>
+                        </oval-res:test>
+                  </oval-res:tests>
+                  <oval-sc:oval_system_characteristics>
+                        <oval-sc:generator>
+                              <oval:product_name>SCAP Compliance Checker</oval:product_name>
+                              <oval:product_version>5.4</oval:product_version>
+                              <oval:schema_version>5.11.2</oval:schema_version>
+                              <oval:timestamp>2021-05-25T03:09:05</oval:timestamp>
+                        </oval-sc:generator>
+                        <oval-sc:system_info>
+                              <oval-sc:os_name>Windows Server 2016 Standard</oval-sc:os_name>
+                              <oval-sc:os_version>1607</oval-sc:os_version>
+                              <oval-sc:architecture>Intel64 Family 6 Model 60 Stepping 3</oval-sc:architecture>
+                              <oval-sc:primary_host_name>winserver</oval-sc:primary_host_name>
+                              <oval-sc:interfaces>
+                                    <oval-sc:interface>
+                                          <oval-sc:interface_name>[00000000] Intel(R) 82574L Gigabit Network Connection</oval-sc:interface_name>
+                                          <oval-sc:ip_address>192.168.0.48</oval-sc:ip_address>
+                                          <oval-sc:mac_address>00:50:56:BB:A1:2B</oval-sc:mac_address>
+                                    </oval-sc:interface>
+                              </oval-sc:interfaces>
+                              <__NS1:asset-identification xmlns:__NS1="http://scap.nist.gov/schema/scap/constructs/1.2">
+                                    <__NS2:object-ref ref-id="SCC_winserver" xmlns:__NS2="http://scap.nist.gov/schema/asset-reporting-format/1.1" />
+                              </__NS1:asset-identification>
+                        </oval-sc:system_info>
+                        <oval-sc:collected_objects>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:479800" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:479801" version="3">
+                                    <oval-sc:reference item_ref="1"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:479900" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:479901" version="3">
+                                    <oval-sc:reference item_ref="2"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480000" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:480001" version="3">
+                                    <oval-sc:reference item_ref="3"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480100" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480101" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480200" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480201" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480600" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:480601" version="3">
+                                    <oval-sc:reference item_ref="4"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:480701" version="3">
+                                    <oval-sc:reference item_ref="5"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480700" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480800" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:480801" version="3">
+                                    <oval-sc:reference item_ref="6"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480900" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:480901" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481000" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481001" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481400" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:481401" version="3">
+                                    <oval-sc:reference item_ref="7"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481500" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:481501" version="3">
+                                    <oval-sc:reference item_ref="8"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481600" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:481601" version="3">
+                                    <oval-sc:reference item_ref="9"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481700" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481701" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481800" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:481801" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:482100" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:482101" version="3">
+                                    <oval-sc:reference item_ref="10"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:482200" version="3"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:482400" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:482401" version="3">
+                                    <oval-sc:reference item_ref="11"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:482500" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:482501" version="3">
+                                    <oval-sc:reference item_ref="12"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.fso.windows:obj:482600" version="3"></oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.fso.windows:obj:482601" version="3">
+                                    <oval-sc:reference item_ref="13"></oval-sc:reference>
+                              </oval-sc:object>
+                        </oval-sc:collected_objects>
+                        <oval-sc:system_data>
+                              <win-sc:registry_item id="1" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile</win-sc:key>
+                                    <win-sc:name>EnableFirewall</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197910210000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="2" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile</win-sc:key>
+                                    <win-sc:name>EnableFirewall</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">1</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="3" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile</win-sc:key>
+                                    <win-sc:name>EnableFirewall</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">1</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="4" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogFileSize</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">4096</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="5" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogDroppedPackets</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="6" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\DomainProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogSuccessfulConnections</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="7" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogFileSize</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">4096</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="8" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogDroppedPackets</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="9" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogSuccessfulConnections</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="10" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>System\CurrentControlSet\Services\TCPIP\Parameters</win-sc:key>
+                                    <win-sc:name>Domain</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132626843660000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>ad.local</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="11" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogFileSize</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">4096</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="12" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogDroppedPackets</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="13" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\PublicProfile\Logging</win-sc:key>
+                                    <win-sc:name>LogSuccessfulConnections</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">131197289030000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_dword</win-sc:type>
+                                    <win-sc:value datatype="int">0</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                        </oval-sc:system_data>
+                  </oval-sc:oval_system_characteristics>
+            </oval-res:system>
+      </oval-res:results>
+</oval-res:oval_results>

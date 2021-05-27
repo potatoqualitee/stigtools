@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:OVAL CPE Results,StreamName:Windows_Server_2016_STIG-002.001,ErrorCount:0,WarnCount:0 -->
+
+<oval-res:oval_results xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-results-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-results-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-system-characteristics-schema.xsd" xmlns:oval-res="http://oval.mitre.org/XMLSchema/oval-results-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:ind-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" xmlns:oval-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5" xmlns:ind-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:win-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows" xmlns:linux-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" xmlns:linux-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux">
+      <oval-res:generator>
+            <oval:product_name>SCAP Compliance Checker</oval:product_name>
+            <oval:product_version>5.4</oval:product_version>
+            <oval:schema_version>5.11.2</oval:schema_version>
+            <oval:timestamp>2021-05-25T03:09:07</oval:timestamp>
+      </oval-res:generator>
+      <oval-res:directives>
+            <oval-res:definition_true content="full" reported="true"></oval-res:definition_true>
+            <oval-res:definition_false content="full" reported="true"></oval-res:definition_false>
+            <oval-res:definition_unknown content="full" reported="true"></oval-res:definition_unknown>
+            <oval-res:definition_error content="full" reported="true"></oval-res:definition_error>
+            <oval-res:definition_not_evaluated content="full" reported="true"></oval-res:definition_not_evaluated>
+            <oval-res:definition_not_applicable content="full" reported="true"></oval-res:definition_not_applicable>
+      </oval-res:directives>
+      <oval-def:oval_definitions>
+            <oval-def:generator>
+                  <oval:product_name>repotool</oval:product_name>
+                  <oval:schema_version>5.10</oval:schema_version>
+                  <oval:timestamp>2020-10-27T12:03:29</oval:timestamp>
+            </oval-def:generator>
+            <oval-def:definitions>
+                  <oval-def:definition id="oval:mil.disa.stig.windows:def:1001" class="inventory" version="2">
+                        <oval-def:metadata>
+                              <oval-def:title>Microsoft Windows Server 2016 is installed</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:reference source="CPE" ref_id="cpe:/o:microsoft:windows_server_2016:-"></oval-def:reference>
+                              <oval-def:description>A version of Microsoft Windows Server 2016 is installed.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criteria applicability_check="false" operator="OR">
+                                    <oval-def:criteria applicability_check="false" comment="Windows Server Core v1709 or v1803 is installed">
+                                          <oval-def:criterion applicability_check="false" comment="Installation type is Server Core" test_ref="oval:mil.disa.stig.windows:tst:100102"></oval-def:criterion>
+                                          <oval-def:criterion applicability_check="false" comment="Release version is 1709 or 1803" test_ref="oval:mil.disa.stig.windows:tst:100103"></oval-def:criterion>
+                                    </oval-def:criteria>
+                                    <oval-def:criterion applicability_check="false" comment="Windows Server 2016 is installed" test_ref="oval:mil.disa.stig.windows:tst:100101"></oval-def:criterion>
+                              </oval-def:criteria>
+                              <oval-def:criterion applicability_check="false" comment="the installed operating system is part of the Microsoft Windows family" test_ref="oval:mil.disa.stig.windows:tst:100100"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+            </oval-def:definitions>
+            <oval-def:tests>
+                  <ind-def:family_test check="only one" comment="the installed operating system is part of the Microsoft Windows family" check_existence="at_least_one_exists" id="oval:mil.disa.stig.windows:tst:100100" version="1" state_operator="AND">
+                        <ind-def:object object_ref="oval:mil.disa.stig.windows:obj:100100"></ind-def:object>
+                        <ind-def:state state_ref="oval:mil.disa.stig.windows:ste:100100"></ind-def:state>
+                  </ind-def:family_test>
+                  <win-def:registry_test check="at least one" comment="Windows Server 2016 is installed" check_existence="at_least_one_exists" id="oval:mil.disa.stig.windows:tst:100101" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.windows:obj:100101"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.windows:ste:100101"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="at least one" comment="Installation type is Server Core" check_existence="at_least_one_exists" id="oval:mil.disa.stig.windows:tst:100102" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.windows:obj:100102"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.windows:ste:100102"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Release version is 1709 or 1803" check_existence="at_least_one_exists" id="oval:mil.disa.stig.windows:tst:100103" version="1" state_operator="OR">
+                        <win-def:object object_ref="oval:mil.disa.stig.windows:obj:100103"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.windows:ste:100103"></win-def:state>
+                        <win-def:state state_ref="oval:mil.disa.stig.windows:ste:100104"></win-def:state>
+                  </win-def:registry_test>
+            </oval-def:tests>
+            <oval-def:objects>
+                  <ind-def:family_object comment="Family" id="oval:mil.disa.stig.windows:obj:100100" version="1"></ind-def:family_object>
+                  <win-def:registry_object comment="This registry key identifies the Windows ProductName" id="oval:mil.disa.stig.windows:obj:100101" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</win-def:key>
+                        <win-def:name>ProductName</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="This registry key identifies the Windows Installation Type" id="oval:mil.disa.stig.windows:obj:100102" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</win-def:key>
+                        <win-def:name>InstallationType</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="This registry key identifies the Windows Release ID" id="oval:mil.disa.stig.windows:obj:100103" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</win-def:key>
+                        <win-def:name>ReleaseID</win-def:name>
+                  </win-def:registry_object>
+            </oval-def:objects>
+            <oval-def:states>
+                  <ind-def:family_state comment="Microsoft Windows family" id="oval:mil.disa.stig.windows:ste:100100" version="1">
+                        <ind-def:family>windows</ind-def:family>
+                  </ind-def:family_state>
+                  <win-def:registry_state comment="The registry key matches with Windows Server 2016" id="oval:mil.disa.stig.windows:ste:100101" version="2">
+                        <win-def:value operation="pattern match">^[a-zA-Z0-9\(\)\s]*[Ww][Ii][Nn][Dd][Oo][Ww][Ss]\s+[Ss][Ee][Rr][Vv][Ee][Rr]\s+2016[a-zA-Z0-9\(\)\s]*$</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="The registry value matches with Windows Server Core" id="oval:mil.disa.stig.windows:ste:100102" version="1">
+                        <win-def:value>Server Core</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="The registry value matches with v1709" id="oval:mil.disa.stig.windows:ste:100103" version="1">
+                        <win-def:value>1709</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="The registry value matches with v1803" id="oval:mil.disa.stig.windows:ste:100104" version="1">
+                        <win-def:value>1803</win-def:value>
+                  </win-def:registry_state>
+            </oval-def:states>
+      </oval-def:oval_definitions>
+      <oval-res:results>
+            <oval-res:system>
+                  <oval-res:definitions>
+                        <oval-res:definition result="true" definition_id="oval:mil.disa.stig.windows:def:1001" version="2">
+                              <oval-res:criteria applicability_check="false" result="true" operator="AND">
+                                    <oval-res:criteria applicability_check="false" result="true" operator="OR">
+                                          <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                                <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.windows:tst:100102"></oval-res:criterion>
+                                                <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.windows:tst:100103"></oval-res:criterion>
+                                          </oval-res:criteria>
+                                          <oval-res:criterion applicability_check="false" result="true" version="1" test_ref="oval:mil.disa.stig.windows:tst:100101"></oval-res:criterion>
+                                    </oval-res:criteria>
+                                    <oval-res:criterion applicability_check="false" result="true" version="1" test_ref="oval:mil.disa.stig.windows:tst:100100"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                  </oval-res:definitions>
+                  <oval-res:tests>
+                        <oval-res:test check="at least one" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.windows:tst:100102" version="1" state_operator="AND">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="1" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.windows:tst:100103" version="1" state_operator="OR">
+                              <oval-res:message level="info">check</oval-res:message>
+                              <oval-res:tested_item item_id="2" result="false">
+                                    <oval-res:message level="info">value</oval-res:message>
+                              </oval-res:tested_item>
+                        </oval-res:test>
+                        <oval-res:test check="at least one" result="true" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.windows:tst:100101" version="1" state_operator="AND">
+                              <oval-res:tested_item item_id="3" result="true"></oval-res:tested_item>
+                        </oval-res:test>
+                        <oval-res:test check="only one" result="true" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.windows:tst:100100" version="1" state_operator="AND">
+                              <oval-res:tested_item item_id="4" result="true"></oval-res:tested_item>
+                        </oval-res:test>
+                  </oval-res:tests>
+                  <oval-sc:oval_system_characteristics>
+                        <oval-sc:generator>
+                              <oval:product_name>SCAP Compliance Checker</oval:product_name>
+                              <oval:product_version>5.4</oval:product_version>
+                              <oval:schema_version>5.11.2</oval:schema_version>
+                              <oval:timestamp>2021-05-25T03:09:07</oval:timestamp>
+                        </oval-sc:generator>
+                        <oval-sc:system_info>
+                              <oval-sc:os_name>Windows Server 2016 Standard</oval-sc:os_name>
+                              <oval-sc:os_version>1607</oval-sc:os_version>
+                              <oval-sc:architecture>Intel64 Family 6 Model 60 Stepping 3</oval-sc:architecture>
+                              <oval-sc:primary_host_name>winserver</oval-sc:primary_host_name>
+                              <oval-sc:interfaces>
+                                    <oval-sc:interface>
+                                          <oval-sc:interface_name>[00000000] Intel(R) 82574L Gigabit Network Connection</oval-sc:interface_name>
+                                          <oval-sc:ip_address>192.168.0.48</oval-sc:ip_address>
+                                          <oval-sc:mac_address>00:50:56:BB:A1:2B</oval-sc:mac_address>
+                                    </oval-sc:interface>
+                              </oval-sc:interfaces>
+                              <__NS1:asset-identification xmlns:__NS1="http://scap.nist.gov/schema/scap/constructs/1.2">
+                                    <__NS2:object-ref ref-id="SCC_winserver" xmlns:__NS2="http://scap.nist.gov/schema/asset-reporting-format/1.1" />
+                              </__NS1:asset-identification>
+                        </oval-sc:system_info>
+                        <oval-sc:collected_objects>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.windows:obj:100102" version="1">
+                                    <oval-sc:reference item_ref="1"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.windows:obj:100103" version="1">
+                                    <oval-sc:reference item_ref="2"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.windows:obj:100101" version="1">
+                                    <oval-sc:reference item_ref="3"></oval-sc:reference>
+                              </oval-sc:object>
+                              <oval-sc:object flag="complete" id="oval:mil.disa.stig.windows:obj:100100" version="1">
+                                    <oval-sc:reference item_ref="4"></oval-sc:reference>
+                              </oval-sc:object>
+                        </oval-sc:collected_objects>
+                        <oval-sc:system_data>
+                              <win-sc:registry_item id="1" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</win-sc:key>
+                                    <win-sc:name>InstallationType</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132662303210000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Server</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="2" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</win-sc:key>
+                                    <win-sc:name>ReleaseID</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132662303210000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>1607</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <win-sc:registry_item id="3" status="exists">
+                                    <win-sc:hive>HKEY_LOCAL_MACHINE</win-sc:hive>
+                                    <win-sc:key>SOFTWARE\Microsoft\Windows NT\CurrentVersion</win-sc:key>
+                                    <win-sc:name>ProductName</win-sc:name>
+                                    <win-sc:last_write_time datatype="int">132662303210000000</win-sc:last_write_time>
+                                    <win-sc:type>reg_sz</win-sc:type>
+                                    <win-sc:value>Windows Server 2016 Standard</win-sc:value>
+                                    <win-sc:windows_view>64_bit</win-sc:windows_view>
+                              </win-sc:registry_item>
+                              <ind-sc:family_item id="4" status="exists">
+                                    <ind-sc:family>windows</ind-sc:family>
+                              </ind-sc:family_item>
+                        </oval-sc:system_data>
+                  </oval-sc:oval_system_characteristics>
+            </oval-res:system>
+      </oval-res:results>
+</oval-res:oval_results>
