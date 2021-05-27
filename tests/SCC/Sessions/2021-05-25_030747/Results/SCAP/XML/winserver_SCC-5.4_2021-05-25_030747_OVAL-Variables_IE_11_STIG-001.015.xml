@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:OVAL Variables,StreamName:IE_11_STIG-001.015,ErrorCount:0,WarnCount:0 -->
+
+<oval-var:oval_variables xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-variables-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-variables-schema.xsd" xmlns:oval-var="http://oval.mitre.org/XMLSchema/oval-variables-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <oval-var:generator>
+            <oval:product_name>SCAP Compliance Checker</oval:product_name>
+            <oval:product_version>5.4</oval:product_version>
+            <oval:schema_version>5.11.2</oval:schema_version>
+            <oval:timestamp>2021-05-25T03:07:53</oval:timestamp>
+      </oval-var:generator>
+      <oval-var:variables>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:42200">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:42300">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:42400">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:42700">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:42800">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:42900">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:43100">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:43200">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:43300">
+                  <oval-var:value>65536</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:43600">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:43700">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:43800">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:43900">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44000">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44100">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:45300">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44300">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44400">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44500">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44700">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44800">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:44900">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:45000">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:45100">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:45200">
+                  <oval-var:value>196608</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:41900">
+                  <oval-var:value>1</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:41800">
+                  <oval-var:value>1</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:41700">
+                  <oval-var:value>1</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:45700">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:45900">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46100">
+                  <oval-var:value>1</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46200">
+                  <oval-var:value>yes</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46300">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46400">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46500">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46600">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46700">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46800">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:46900">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:47000">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:47100">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:47300">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:47400">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:47500">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:48000">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:48100">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:48200">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:48300">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:48400">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:48500">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:48600">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:49700">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:49800">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:49900">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:50900">
+                  <oval-var:value>1</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:51400">
+                  <oval-var:value>1</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:51600">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:51700">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:51800">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:51900">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52000">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52100">
+                  <oval-var:value>1</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52200">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52400">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52500">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52600">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52700">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:52800">
+                  <oval-var:value>0</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:53100">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:53200">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:53300">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:58300">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+            <oval-var:variable datatype="string" comment="" id="oval:mil.disa.fso.ie:var:58400">
+                  <oval-var:value>3</oval-var:value>
+            </oval-var:variable>
+      </oval-var:variables>
+</oval-var:oval_variables>

@@ -1,0 +1,1854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SessionID:2021-05-25_030747,HostName:winserver,FileType:OVAL Results,StreamName:Google_Chrome_Current_Windows-002.002,ErrorCount:0,WarnCount:0 -->
+
+<oval-res:oval_results xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-results-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-results-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5 https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/oval-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/independent-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/windows-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/linux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#solaris https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/solaris-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#hpux https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/hpux-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#macos https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/macos-system-characteristics-schema.xsd http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#unix https://raw.githubusercontent.com/OVALProject/Language/5.11.2/schemas/unix-system-characteristics-schema.xsd" xmlns:oval-res="http://oval.mitre.org/XMLSchema/oval-results-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:oval-def="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:ind-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" xmlns:oval-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5" xmlns:ind-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#independent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" xmlns:win-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#windows" xmlns:linux-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" xmlns:linux-sc="http://oval.mitre.org/XMLSchema/oval-system-characteristics-5#linux">
+      <oval-res:generator>
+            <oval:product_name>SCAP Compliance Checker</oval:product_name>
+            <oval:product_version>5.4</oval:product_version>
+            <oval:schema_version>5.11.2</oval:schema_version>
+            <oval:timestamp>2021-05-25T03:07:50</oval:timestamp>
+      </oval-res:generator>
+      <oval-res:directives>
+            <oval-res:definition_true content="full" reported="true"></oval-res:definition_true>
+            <oval-res:definition_false content="full" reported="true"></oval-res:definition_false>
+            <oval-res:definition_unknown content="full" reported="true"></oval-res:definition_unknown>
+            <oval-res:definition_error content="full" reported="true"></oval-res:definition_error>
+            <oval-res:definition_not_evaluated content="full" reported="true"></oval-res:definition_not_evaluated>
+            <oval-res:definition_not_applicable content="full" reported="true"></oval-res:definition_not_applicable>
+      </oval-res:directives>
+      <oval-def:oval_definitions>
+            <oval-def:generator>
+                  <oval:product_name>repotool</oval:product_name>
+                  <oval:schema_version>5.10</oval:schema_version>
+                  <oval:timestamp>2021-01-04T10:42:52</oval:timestamp>
+            </oval-def:generator>
+            <oval-def:definitions>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240001" class="compliance" version="56054703">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0001 - Firewall traversal from remote host must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Enables usage of STUN and relay servers when remote clients are trying to establish a connection to this machine. If this setting is enabled, then remote clients can discover and connect to this machines even if they are separated by a firewall. If this setting is disabled and outgoing UDP connections are filtered by the firewall, then this machine will only allow connections from client machines within the local network. If this policy is left not set the setting will be enabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240001"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240002" class="compliance" version="56054706">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0002 - Site tracking user's location must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Allows you to set whether websites are allowed to track the users' physical location. Tracking the users' physical location can be allowed by default, denied by default or the user can be asked every time a website requests the physical location. If this policy is left not set, 'AskGeolocation' will be used and the user will be able to change it.
+	1 = Allow sites to track the users' physical location
+	2 = Do not allow any site to track the users' physical location
+	3 = Ask whenever a site wants to track the users' physical location</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240002"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240004" class="compliance" version="56054712">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0004 - Sites' ability to show pop-ups must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Allows you to set whether websites are allowed to show pop-ups. Showing popups can be either allowed for all websites or denied for all websites. If this policy is left not set, 'BlockPopups' will be used and the user will be able to change it.
+    1 = Allow all sites to show pop-ups
+    2 = Do not allow any site to show popups</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240004"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240005" class="compliance" version="56054715">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0005 - Extensions must be blacklisted by default</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Allows you to specify which extensions the users can NOT install. Extensions already installed will be removed if blacklisted. A blacklist value of '*' means all extensions are blacklisted unless they are explicitly listed in the whitelist. If this policy is left not set the user can install any extension in Google Chrome.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240005"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240006" class="compliance" version="56054718">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0006 - Extensions that are approved for use must be whitelisted</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Allows you to specify which extensions are not subject to the blacklist. A blacklist value of * means all extensions are blacklisted and users can only install extensions listed in the whitelist. By default, no extensions are whitelisted. If all extensions have been blacklisted by policy, then the whitelist policy can be used to allow specific extensions to be installed. Administrators should determine which extensions should be allowed to be installed by their users. If no extensions are whitelisted, then no extensions can be installed when combined with blacklisting all extensions.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240006"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240007" class="compliance" version="56054721">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0007 - The default search provider's name must be set</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Specifies the name of the default search provider. If left empty or not set, the host name specified by the search URL will be used. This policy is only considered if the 'DefaultSearchProviderEnabled' policy is enabled</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240007"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240009" class="compliance" version="56054727">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0009 - Default search provider must be enabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Enables the use of a default search provider. If you enable this setting, a default search is performed when the user types text In the omnibox that is not a URL. You can specify the default search provider to be used by setting the rest of the default search policies. If these are left empty, the user can choose the default provider. If you disable this setting, no search is performed when the user enters non-URL text in the omnibox. If you enable or disable this setting, users cannot change or override this setting in Google Chrome. If this policy is left not set, the default search provider is enabled, and the user will be able to set the search provider list.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240009"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240011" class="compliance" version="56054733">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0011 - The Password Manager must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Enables saving passwords and using saved passwords in Google Chrome. If you enable this setting, users can have Google Chrome memorize passwords and provide them automatically the next time they log in to a site. If you disable this setting, users are not able to save passwords or use already saved passwords. If you enable or disable this setting, users cannot change or override this setting in Google Chrome. If this policy is left not set, this will be enabled but the user will be able to change it.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240011"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240013" class="compliance" version="56054739">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0013 - The running of outdated plugins must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>Allows Google Chrome to run plugins that are outdated. If you enable this setting, outdated plugins are used as normal plugins. If you disable this setting, outdated plugins will not be used and users will not be asked for permission to run them. If this setting is not set, users will be asked for permission to run outdated plugins.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240013"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240017" class="compliance" version="56054751">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0017 - Background processing must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Determines whether a Google Chrome process is started on OS login and keeps running when the last browser window is closed, allowing background apps to remain active. The background process displays an icon in the system tray and can always be closed from there. If this policy is set to True, background mode is enabled and cannot be controlled by the user in the browser settings. If this policy is set to False, background mode is disabled and cannot be controlled by the user in the browser settings. If this policy is left unset, background mode is initially disabled and can be controlled by the user in the browser settings.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240017"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240020" class="compliance" version="56054760">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0020 - Google Data Synchronization must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Disables data synchronization in Google Chrome using Google-hosted synchronization services and prevents users from changing this setting. If you enable this setting, users cannot change or override this setting in Google Chrome. If this policy is left not set Google Sync will be available for the user to choose whether to use it or not.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240020"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240021" class="compliance" version="56054764">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0021 - The URL protocol schema "javascript" must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Disables the listed protocol schemes in Google Chrome. URLs using a scheme from this list will not load and can not be navigated to. If this policy is left not set or the list is empty all schemes will be accessible in Google Chrome.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false" operator="OR">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:2400211"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240023" class="compliance" version="2">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0023 - Disable Cloud Print Sharing</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>"Enables Google Chrome to act as a proxy between Google Cloud Print and legacy printers connected to the machine. If this setting is enabled or not configured, users can enable the cloud print proxy by authentication with their Google account. If this setting is disabled, users cannot enable the proxy, and the machine will not be allowed to share it's printers with Google Cloud Print. If this policy is left not set, this will be enabled but the user will be able to change it." - Google Chrome Administrators Policy List</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240023"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240025" class="compliance" version="56054781">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0025 - Network prediction must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Disables network prediction in Google Chrome and prevents users from changing this setting. If you enable or disable this setting, users cannot change or override this setting in Google Chrome. If this policy is left not set, this will be disabled but the user will be able to change it.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Check the registry value HKLM\Software\Policies\Google\Chrome\NetworkPredictionOptions\NetworkPredictionOptions is set to 2 to disable network prediction" test_ref="oval:mil.disa.stig.chrome:tst:240025"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240026" class="compliance" version="56054781">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0026 - Metrics reporting to Google must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Enables anonymous reporting of usage and crash-related data about Google Chrome to Google and prevents users from changing this setting. If you enable this setting, anonymous reporting of usage and crash-related data is sent to Google. If you disable this setting, anonymous reporting of usage and crash-related data is never sent to Google. If you enable or disable this setting, users cannot change or override this setting in Google Chrome. If this policy is left not set the setting will be what the user chose upon installation / first run.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240026"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240027" class="compliance" version="56054784">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0027 - Search suggestions must be enabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Enables search suggestions in Google Chrome's Omnibox and prevents users from changing this setting. If you enable this setting, search suggestions are used. If you disable this setting, search suggestions are never used. If you enable or disable this setting, users cannot change or override this setting in Google Chrome. If this policy is left not set, this will be enabled but the user will be able to change it.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240027"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240029" class="compliance" version="56054789">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0029 - Importing of saved passwords must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Google Chrome</oval-def:platform>
+                              </oval-def:affected>
+                              <oval-def:description>This policy forces the saved passwords to be imported from the previous default browser if enabled. If enabled, this policy also affects the import dialog. If disabled, the saved passwords are not imported. If it is not set, the user may be asked whether to import, or importing may happen automatically.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240029"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240030" class="compliance" version="56054793">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0030 - Incognito mode must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Specifies whether the user may open pages in Incognito mode in Google Chrome. If 'Enabled' is selected or the policy is left unset, pages may be opened in Incognito mode. If 'Disabled' is selected, pages may not be opened in Incognito mode. If 'Forced' is selected, pages may be opened ONLY in Incognito mode.
+    0 = Incognito mode available.
+    1 = Incognito mode disabled.
+    2 = Incognito mode forced.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240030"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240037" class="compliance" version="56054820">
+                        <oval-def:metadata>
+                              <oval-def:title>DBTC-0037 - Online revocation checks must be done</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>In light of the fact that soft-fail, online revocation checks provide no effective security benefit, they are disabled by default in Google Chrome version 19 and later. By setting this policy to true, the previous behaviour is restored and online OCSP/CRL checks will be performed. If the policy is not set, or is set to false, then Chrome will not perform online revocation checks in Chrome 19 and later.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240037"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240038" class="compliance" version="56054823">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0038 - Safe Browsing must be enabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Enables Google Chrome's Safe Browsing feature and prevents users from changing this setting. If you enable this setting, Safe Browsing is always active. If you disable this setting, Safe Browsing is never active. If you enable or disable this setting, users cannot change or override this setting in Google Chrome. If this policy is left not set, this will be enabled but the user will be able to change it.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240038"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240039" class="compliance" version="56054826">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0039 - Browser history must be saved</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Disables saving browser history in Google Chrome and prevents users from changing this setting. If this setting is enabled, browsing history is not saved. If this setting is disabled or not set, browsing history is saved.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240039"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240040" class="compliance" version="56054830">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0040 - Default behavior must set Flash to Click to Play</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Allows you to set whether websites are allowed to automatically run the Flash plugin. Automatically running the Flash plugin can be either allowed for all websites or denied for all websites. 
+
+Click to play allows the Flash plugin to run but the user must click on the placeholder to start its execution.
+
+If this policy is left not set, the user will be able to change it.
+    1 = Allow all sites to automatically run the Flash plugin
+    2 = Block the Flash plugin
+    3 = Click to Play</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240040"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240045" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0045 - Session only based cookies must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Policy allows you to set a list of URL patterns that specify sites which are allowed to set session only cookies. If this policy is left not set the global default value will be used for all sites either from the 'DefaultCookiesSetting' policy if it is set, or the user's personal configuration otherwise. If the 'RestoreOnStartup' policy is set to restore URLs from previous sessions this policy will not be respected and cookies will be stored permanently for those sites.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:240045"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240052" class="compliance" version="56054765">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0052 - Google Chrome must disable the 'Enable deleting browser and download history' setting</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Users should not be allowed to delete browser and download history. The 'Enable deleting browser and download history' setting must be set to disabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false" operator="OR">
+                              <oval-def:criterion applicability_check="false" comment="Check to make sure that google chrome is set to not allow deletion of browser and download hisotry." test_ref="oval:mil.disa.stig.chrome:tst:240052"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240069" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0069 - Browser Guest mode must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2019</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Specifies whether the user may open pages in Browser Guest mode in Google Chrome. If 'Enabled' is selected or the policy is left unset, pages may be opened in Browser Guest mode. If 'Disabled' is selected, pages may not be opened in Browser Guest mode. 
+    0 = Browser Guest mode disabled.
+    1 = Browser Guest mode availble.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check that BrowserGuestModeEnabled is set to 0 to disable Browser Guest Mode" test_ref="oval:mil.disa.stig.chrome:tst:240069"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240070" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0070 - Enable AutoFill for credit cards must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2019</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Specifies whether the user may have credit card information auto filled in Google Chrome. If 'Enabled' is selected or the policy is left unset, pages may autofill credit card information. If 'Disabled' is selected, pages may not not autofill credit card information. 
+    0 = AutoFill Credit Card information disabled.
+    1 = AutoFill Credit Card information enabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check that AutofillCreditCardEnabled is set to 0 to disable the auto filling of credit card information." test_ref="oval:mil.disa.stig.chrome:tst:240070"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240071" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0071 - Enable AutoFill for addresses must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2019</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Specifies whether the user may have address information auto filled in Google Chrome. If 'Enabled' is selected or the policy is left unset, pages may autofill address information. If 'Disabled' is selected, pages may not not autofill address information. 
+    0 = AutoFill Address information disabled.
+    1 = AutoFill Address information enabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check that AutofillAddressEnabled is set to 0 to disable AutoFill for addresses" test_ref="oval:mil.disa.stig.chrome:tst:240071"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:240072" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0072 - Import autofill form data from default browser on first run must be disabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2019</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Specifies whether Google Chrome may import autofill form data from the default browser on its first run. This policy forces the autofill form data to be imported from the previous default browser if enabled. If "Enabled", this policy also affects the import dialog. If the policy is left not set, the user may be asked whether to import, or importing may happen automatically. If 'Disabled' is selected, the autofill form data is not imported.
+    0 = Import autofill form data from the default browser on its first run is disabled.
+    1 = Import autofill form data from the default browser on its first run is enabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check that ImportAutofillFormData is set to 0 to disable Browser Guest Mode" test_ref="oval:mil.disa.stig.chrome:tst:240072"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:520063" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0063 - Google Cast must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Google Cast must be disabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Google Cast must be disabled." test_ref="oval:mil.disa.stig.chrome:tst:52006300"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:610055" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0055 - Download restrictions must be configured.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Configure the type of downloads that Google Chrome will completely block, without letting users override the security decision. If you set this policy, Google Chrome will prevent certain types of downloads, and will not let user bypass the security warnings. When the "Block dangerous downloads" option is chosen, all downloads are allowed, except for those that carry SafeBrowsing warnings. When the "Block potentially dangerous downloads" option is chosen, all downloads allowed, except for those that carry SafeBrowsing warnings of potentially dangerous downloads. When the "Block all downloads" option is chosen, all downloads are blocked.  When this policy is not set, (or the "No special restrictions" option is chosen), the downloads will go through the usual security restrictions based on SafeBrowsing analysis results.
+
+Note that these restrictions apply to downloads triggered from web page content, as well as the 'download link...' context menu option. These restrictions do not apply to the save / download of the currently displayed page, nor does it apply to saving as PDF from the printing options. See https://developers.google.com/safe-browsing for more info on SafeBrowsing.
+0 = No special restrictions
+1 = Block dangerous downloads
+2 = Block potentially dangerous downloads
+3 = Block all downloads</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:610055"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:640053" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0053 - Prompt for download location must be enabled</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>If the policy is enabled, the user will be asked where to save each file before downloading. If the policy is disabled, downloads will start immediately, and the user will not be asked where to save the file. If the policy is not configured, the user will be able to change this setting.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Registry check" test_ref="oval:mil.disa.stig.chrome:tst:640053"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:660055" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0055 - Autoplay must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Autoplay must be disabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Check AutoplayAllowed value." test_ref="oval:mil.disa.stig.chrome:tst:66005500"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:660057" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0057 - Safe Browsing Extended Reporting must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Do not send Extended Reporting data to Google servers.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Check SafeBrowsingExtendedReportingEnabled value." test_ref="oval:mil.disa.stig.chrome:tst:66005700"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:670058" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0058 - WebUSB must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>WebUSB must be disabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="WebUSB must be disabled." test_ref="oval:mil.disa.stig.chrome:tst:67005800"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:680060" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0060 - Chrome Cleanup must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Chrome Cleanup must be disabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Chrome Cleanup must be disabled." test_ref="oval:mil.disa.stig.chrome:tst:68006000"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:680061" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0061 - Chrome Cleanup reporting must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Chrome Cleanup reporting must be disabled.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Chrome Cleanup reporting must be disabled." test_ref="oval:mil.disa.stig.chrome:tst:68006100"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:680062" class="compliance" version="2">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0068 - Chrome Developer Tools Availability must be disallowed.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2019</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Chrome Developer Tools Availability must be disallowed.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Chrome Developer Tools Availability must be disallowed." test_ref="oval:mil.disa.stig.chrome:tst:68006200"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:690066" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0066 - URL-keyed anonymized data collection must be disabled.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>Disable URL-keyed anonymized data collection in Google Chrome and prevents users from changing this setting.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Check the registry value HKLM\Software\Policies\Google\Chrome\UrlKeyedAnonymizedDataCollectionEnabled is set to 0 to disable anonymized data collection" test_ref="oval:mil.disa.stig.chrome:tst:690066"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+                  <oval-def:definition id="oval:mil.disa.stig.chrome:def:700067" class="compliance" version="1">
+                        <oval-def:metadata>
+                              <oval-def:title>DTBC-0067 - Disable WebRTC event log collection.</oval-def:title>
+                              <oval-def:affected family="windows">
+                                    <oval-def:platform>Microsoft Windows Vista</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 7</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2008 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012 R2</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2012</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows Server 2016</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 8.1</oval-def:platform>
+                                    <oval-def:platform>Microsoft Windows 10</oval-def:platform>
+                                    <oval-def:product>Google Chrome</oval-def:product>
+                              </oval-def:affected>
+                              <oval-def:description>If the policy is set to true, Google Chrome is allowed to collect WebRTC event logs from Google services (e.g. Google Meet), and upload those logs to Google.
+
+If the policy is set to false, or is unset, Google Chrome may not collect nor upload such logs.</oval-def:description>
+                        </oval-def:metadata>
+                        <oval-def:criteria applicability_check="false">
+                              <oval-def:criterion applicability_check="false" comment="Check the registry value HKLM\Software\Policies\Google\Chrome\WebRtcEventLogCollectionAllowed is set to 0 to disable WebRTC event log collection" test_ref="oval:mil.disa.stig.chrome:tst:700067"></oval-def:criterion>
+                        </oval-def:criteria>
+                  </oval-def:definition>
+            </oval-def:definitions>
+            <oval-def:tests>
+                  <win-def:registry_test check="all" comment="Disable firewall traversal" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240001" version="56054703" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240001"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240001"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable tracking user's location" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240002" version="56054706" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240002"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240002"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable pop-ups" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240004" version="56054712" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240004"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240004"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Blacklist extensions by default" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240005" version="56054715" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240005"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240005"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Whitelist approved extensions" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240006" version="56054718" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240006"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240006"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Set default search provider name" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240007" version="56054721" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240007"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240007"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Enable default search provider" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240009" version="56054727" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240009"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240009"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable Password Manager" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240011" version="56054733" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240011"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240011"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable outdated plugins" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240013" version="56054739" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240013"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240013"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable background processing" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240017" version="56054751" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240017"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240017"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable Google data synchronization" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240020" version="56054760" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240020"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240020"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable cloud print sharing" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240023" version="57522655" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240023"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240023"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable network prediction" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240025" version="56054780" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240025"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240025"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable Google metrics reporting" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240026" version="56054781" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240026"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240026"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Enable search suggestion" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240027" version="56054784" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240027"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240027"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Password history=VAR" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240029" version="56054789" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240029"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240029"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable incognito mode" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240030" version="56054793" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240030"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240030"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Perform online revocation checks" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240037" version="56054820" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240037"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240037"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Enable safe browsing" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240038" version="56054823" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240038"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240038"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Save browser history" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240039" version="56054826" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240039"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240039"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Set Default Flash setting to Click to Play" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240040" version="56054830" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240040"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240040"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable session only cookies" check_existence="none_exist" id="oval:mil.disa.stig.chrome:tst:240045" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240045"></win-def:object>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Check to make sure that google chrome is set to not allow deletion of browser and download history." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240052" version="56054764" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240052"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240052"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable Browser Guest Mode" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240069" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240069"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240069"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable auto filling of credit card information" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240070" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240070"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240070"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable AutoFill for addresses" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240071" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240071"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240071"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable Browser Guest Mode" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:240072" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:240072"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:240072"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="HKLM\Software\Policies\Google\Chrome\DownloadRestrictions is set to 1 or 2" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:610055" version="1" state_operator="OR">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:610055"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:6100550"></win-def:state>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:6100551"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Prompt for download location" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:640053" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:640053"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:640053"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable URL-keyed anonymized data collection" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:690066" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:690066"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:690066"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Disable WebRTC event log collection" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:700067" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:700067"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:700067"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="First entry in URLBlacklist is 'javascript://*'" check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:2400211" version="56054763" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:2400211"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:2400211"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Google Cast must be disabled." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:52006300" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:52006300"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:52006300"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Check AutoplayAllowed value." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:66005500" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:66005500"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:66005500"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Check SafeBrowsingExtendedReportingEnabled value." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:66005700" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:66005700"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:66005700"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="WebUSB must be disabled." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:67005800" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:67005800"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:67005800"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Chrome Cleanup must be disabled." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:68006000" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:68006000"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:68006000"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Chrome Cleanup reporting must be disabled." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:68006100" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:68006100"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:68006100"></win-def:state>
+                  </win-def:registry_test>
+                  <win-def:registry_test check="all" comment="Chrome Developer Tools Availability must be disallowed." check_existence="at_least_one_exists" id="oval:mil.disa.stig.chrome:tst:68006200" version="1" state_operator="AND">
+                        <win-def:object object_ref="oval:mil.disa.stig.chrome:obj:68006200"></win-def:object>
+                        <win-def:state state_ref="oval:mil.disa.stig.chrome:ste:68006200"></win-def:state>
+                  </win-def:registry_test>
+            </oval-def:tests>
+            <oval-def:objects>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240001" version="56054702">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>RemoteAccessHostFirewallTraversal</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240002" version="56054705">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>SOFTWARE\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DefaultGeolocationSetting</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240004" version="56054711">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DefaultPopupsSetting</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240005" version="56054714">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome\ExtensionInstallBlacklist</win-def:key>
+                        <win-def:name>1</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240006" version="56054717">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome\ExtensionInstallWhitelist</win-def:key>
+                        <win-def:name>1</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240007" version="56054720">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DefaultSearchProviderName</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240009" version="56054726">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DefaultSearchProviderEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240011" version="56054732">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>PasswordManagerEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240013" version="56054738">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>AllowOutdatedPlugins</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240017" version="56054750">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>BackgroundModeEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240020" version="56054759">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>SyncDisabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240023" version="575226513">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome\</win-def:key>
+                        <win-def:name>CloudPrintProxyEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="Check the registry value stored at HKLM\Software\Policies\Google\Chrome\NetworkPredictionOptions" id="oval:mil.disa.stig.chrome:obj:240025" version="56054779">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>NetworkPredictionOptions</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240026" version="56054780">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>MetricsReportingEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240027" version="56054783">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>SearchSuggestEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240029" version="56054789">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>ImportSavedPasswords</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240030" version="56054792">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>IncognitoModeAvailability</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240037" version="56054819">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>EnableOnlineRevocationChecks</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240038" version="56054822">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>SafeBrowsingEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240039" version="56054825">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>SavingBrowserHistoryDisabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240040" version="56054828">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DefaultPluginsSetting</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240045" version="2">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome\CookiesSessionOnlyForUrls</win-def:key>
+                        <win-def:name xsi:nil="true"></win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="Chrome Allow Deletion of browser history gpo setting reg entry." id="oval:mil.disa.stig.chrome:obj:240052" version="56054765">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>AllowDeletingBrowserHistory</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240069" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>BrowserGuestModeEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240070" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>AutofillCreditCardEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240071" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>AutofillAddressEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:240072" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>ImportAutofillFormData</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="Registry Key for HKLM\Software\Policies\Google\Chrome\DownloadRestrictions" id="oval:mil.disa.stig.chrome:obj:610055" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DownloadRestrictions</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:640053" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>PromptForDownloadLocation</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="Check the registry value stored at HKLM\Software\Policies\Google\Chrome\UrlKeyedAnonymizedDataCollectionEnabled" id="oval:mil.disa.stig.chrome:obj:690066" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>UrlKeyedAnonymizedDataCollectionEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="Check the registry value stored at HKLM\Software\Policies\Google\Chrome\WebRtcEventLogCollectionAllowed" id="oval:mil.disa.stig.chrome:obj:700067" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>WebRtcEventLogCollectionAllowed</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object comment="First entry in URLBlacklist" id="oval:mil.disa.stig.chrome:obj:2400211" version="56054763">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome\URLBlacklist</win-def:key>
+                        <win-def:name>1</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:52006300" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>EnableMediaRouter</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:66005500" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>AutoplayAllowed</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:66005700" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>SafeBrowsingExtendedReportingEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:67005800" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DefaultWebUsbGuardSetting</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:68006000" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>ChromeCleanupEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:68006100" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>ChromeCleanupReportingEnabled</win-def:name>
+                  </win-def:registry_object>
+                  <win-def:registry_object id="oval:mil.disa.stig.chrome:obj:68006200" version="1">
+                        <win-def:hive>HKEY_LOCAL_MACHINE</win-def:hive>
+                        <win-def:key>Software\Policies\Google\Chrome</win-def:key>
+                        <win-def:name>DeveloperToolsAvailability</win-def:name>
+                  </win-def:registry_object>
+            </oval-def:objects>
+            <oval-def:states>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240001" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240002" version="56054705">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:3"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240004" version="56054705">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:3"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240005" version="56054804">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:11"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:8"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240006" version="56054717">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:11"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:20"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240007" version="56054720">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:11"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:21"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240009" version="56054705">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:2"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240011" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240013" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240017" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240020" version="56054705">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:2"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240023" version="56054709">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Registry value is a reg_dword set to 2" id="oval:mil.disa.stig.chrome:ste:240025" version="56054705">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">2</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240026" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240027" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240029" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240030" version="56054705">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:2"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240037" version="56054705">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:2"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240038" version="56054705">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:2"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240039" version="56054702">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240040" version="56054709">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:17"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Value of AllowDeletingBrowserHistory" id="oval:mil.disa.stig.chrome:ste:240052" version="56054764">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">0</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240069" version="1">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">0</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240070" version="1">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">0</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240071" version="1">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">0</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:240072" version="1">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">0</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:640053" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:2"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Registry value is a reg_dword set to 0" id="oval:mil.disa.stig.chrome:ste:690066" version="1">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">0</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="Registry value is a reg_dword set to 0" id="oval:mil.disa.stig.chrome:ste:700067" version="1">
+                        <win-def:type>reg_dword</win-def:type>
+                        <win-def:value datatype="int">0</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state comment="(REG_SZ)'javascript://*'" id="oval:mil.disa.stig.chrome:ste:2400211" version="56054763">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:11"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:5"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:6100550" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value datatype="int">1</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:6100551" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value datatype="int">2</win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:52006300" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:66005500" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:66005700" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:67005800" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:3"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:68006000" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:68006100" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:1"></win-def:value>
+                  </win-def:registry_state>
+                  <win-def:registry_state id="oval:mil.disa.stig.chrome:ste:68006200" version="1">
+                        <win-def:type var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:10"></win-def:type>
+                        <win-def:value var_check="at least one" var_ref="oval:mil.disa.stig.chrome:var:3"></win-def:value>
+                  </win-def:registry_state>
+            </oval-def:states>
+            <oval-def:variables>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:1" version="56054702">
+                        <oval-def:value>0</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:2" version="56054714">
+                        <oval-def:value>1</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:3" version="56054705">
+                        <oval-def:value>2</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:5" version="56054766">
+                        <oval-def:value>javascript://*</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:8" version="56054804">
+                        <oval-def:value>*</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The type of the registry entry" id="oval:mil.disa.stig.chrome:var:10" version="56054702">
+                        <oval-def:value>reg_dword</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The type of the registry entry" id="oval:mil.disa.stig.chrome:var:11" version="56054714">
+                        <oval-def:value>reg_sz</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:17" version="56054705">
+                        <oval-def:value>3</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:20" version="56054717">
+                        <oval-def:value>oiigbmnaadbkfbmpbfijlflahbdbdgdf</oval-def:value>
+                  </oval-def:constant_variable>
+                  <oval-def:constant_variable datatype="string" comment="The value of the registry entry" id="oval:mil.disa.stig.chrome:var:21" version="56054720">
+                        <oval-def:value>Google Encrypted</oval-def:value>
+                  </oval-def:constant_variable>
+            </oval-def:variables>
+      </oval-def:oval_definitions>
+      <oval-res:results>
+            <oval-res:system>
+                  <oval-res:definitions>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240001" version="56054703">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054703" test_ref="oval:mil.disa.stig.chrome:tst:240001"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240002" version="56054706">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054706" test_ref="oval:mil.disa.stig.chrome:tst:240002"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240004" version="56054712">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054712" test_ref="oval:mil.disa.stig.chrome:tst:240004"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240005" version="56054715">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054715" test_ref="oval:mil.disa.stig.chrome:tst:240005"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240006" version="56054718">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054718" test_ref="oval:mil.disa.stig.chrome:tst:240006"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240007" version="56054721">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054721" test_ref="oval:mil.disa.stig.chrome:tst:240007"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240009" version="56054727">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054727" test_ref="oval:mil.disa.stig.chrome:tst:240009"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240011" version="56054733">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054733" test_ref="oval:mil.disa.stig.chrome:tst:240011"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240013" version="56054739">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054739" test_ref="oval:mil.disa.stig.chrome:tst:240013"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240017" version="56054751">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054751" test_ref="oval:mil.disa.stig.chrome:tst:240017"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240020" version="56054760">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054760" test_ref="oval:mil.disa.stig.chrome:tst:240020"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240021" version="56054764">
+                              <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054763" test_ref="oval:mil.disa.stig.chrome:tst:2400211"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240023" version="2">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="57522655" test_ref="oval:mil.disa.stig.chrome:tst:240023"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240025" version="56054781">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054780" test_ref="oval:mil.disa.stig.chrome:tst:240025"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240026" version="56054781">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054781" test_ref="oval:mil.disa.stig.chrome:tst:240026"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240027" version="56054784">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054784" test_ref="oval:mil.disa.stig.chrome:tst:240027"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240029" version="56054789">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054789" test_ref="oval:mil.disa.stig.chrome:tst:240029"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240030" version="56054793">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054793" test_ref="oval:mil.disa.stig.chrome:tst:240030"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240037" version="56054820">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054820" test_ref="oval:mil.disa.stig.chrome:tst:240037"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240038" version="56054823">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054823" test_ref="oval:mil.disa.stig.chrome:tst:240038"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240039" version="56054826">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054826" test_ref="oval:mil.disa.stig.chrome:tst:240039"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240040" version="56054830">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054830" test_ref="oval:mil.disa.stig.chrome:tst:240040"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="true" definition_id="oval:mil.disa.stig.chrome:def:240045" version="1">
+                              <oval-res:criteria applicability_check="false" result="true" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="true" version="1" test_ref="oval:mil.disa.stig.chrome:tst:240045"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240052" version="56054765">
+                              <oval-res:criteria applicability_check="false" result="false" operator="OR">
+                                    <oval-res:criterion applicability_check="false" result="false" version="56054764" test_ref="oval:mil.disa.stig.chrome:tst:240052"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:640053" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:640053"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:610055" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:610055"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:660057" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:66005700"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:670058" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:67005800"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:680060" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:68006000"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:680061" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:68006100"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:520063" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:52006300"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:660055" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:66005500"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:690066" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:690066"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:700067" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:700067"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:680062" version="2">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:68006200"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240069" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:240069"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240070" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:240070"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240071" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:240071"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                        <oval-res:definition result="false" definition_id="oval:mil.disa.stig.chrome:def:240072" version="1">
+                              <oval-res:criteria applicability_check="false" result="false" operator="AND">
+                                    <oval-res:criterion applicability_check="false" result="false" version="1" test_ref="oval:mil.disa.stig.chrome:tst:240072"></oval-res:criterion>
+                              </oval-res:criteria>
+                        </oval-res:definition>
+                  </oval-res:definitions>
+                  <oval-res:tests>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240001" version="56054703" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240002" version="56054706" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:3">2</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240004" version="56054712" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:3">2</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240005" version="56054715" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:11">reg_sz</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:8">*</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240006" version="56054718" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:11">reg_sz</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:20">oiigbmnaadbkfbmpbfijlflahbdbdgdf</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240007" version="56054721" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:11">reg_sz</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:21">Google Encrypted</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240009" version="56054727" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:2">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240011" version="56054733" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240013" version="56054739" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240017" version="56054751" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240020" version="56054760" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:2">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:2400211" version="56054763" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:11">reg_sz</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:5">javascript://*</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240023" version="57522655" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240025" version="56054780" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240026" version="56054781" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240027" version="56054784" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240029" version="56054789" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240030" version="56054793" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:2">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240037" version="56054820" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:2">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240038" version="56054823" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:2">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240039" version="56054826" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240040" version="56054830" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:17">3</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="true" check_existence="none_exist" test_id="oval:mil.disa.stig.chrome:tst:240045" version="1" state_operator="AND"></oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240052" version="56054764" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:640053" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:2">1</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:610055" version="1" state_operator="OR">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:66005700" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:67005800" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:3">2</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:68006000" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:68006100" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:52006300" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:66005500" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:1">0</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:690066" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:700067" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:68006200" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:10">reg_dword</oval-res:tested_variable>
+                              <oval-res:tested_variable variable_id="oval:mil.disa.stig.chrome:var:3">2</oval-res:tested_variable>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240069" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240070" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240071" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                        <oval-res:test check="all" result="false" check_existence="at_least_one_exists" test_id="oval:mil.disa.stig.chrome:tst:240072" version="1" state_operator="AND">
+                              <oval-res:message level="info">check_existence</oval-res:message>
+                        </oval-res:test>
+                  </oval-res:tests>
+                  <oval-sc:oval_system_characteristics>
+                        <oval-sc:generator>
+                              <oval:product_name>SCAP Compliance Checker</oval:product_name>
+                              <oval:product_version>5.4</oval:product_version>
+                              <oval:schema_version>5.11.2</oval:schema_version>
+                              <oval:timestamp>2021-05-25T03:07:50</oval:timestamp>
+                        </oval-sc:generator>
+                        <oval-sc:system_info>
+                              <oval-sc:os_name>Windows Server 2016 Standard</oval-sc:os_name>
+                              <oval-sc:os_version>1607</oval-sc:os_version>
+                              <oval-sc:architecture>Intel64 Family 6 Model 60 Stepping 3</oval-sc:architecture>
+                              <oval-sc:primary_host_name>winserver</oval-sc:primary_host_name>
+                              <oval-sc:interfaces>
+                                    <oval-sc:interface>
+                                          <oval-sc:interface_name>[00000000] Intel(R) 82574L Gigabit Network Connection</oval-sc:interface_name>
+                                          <oval-sc:ip_address>192.168.0.48</oval-sc:ip_address>
+                                          <oval-sc:mac_address>00:50:56:BB:A1:2B</oval-sc:mac_address>
+                                    </oval-sc:interface>
+                              </oval-sc:interfaces>
+                              <__NS1:asset-identification xmlns:__NS1="http://scap.nist.gov/schema/scap/constructs/1.2">
+                                    <__NS2:object-ref ref-id="SCC_winserver" xmlns:__NS2="http://scap.nist.gov/schema/asset-reporting-format/1.1" />
+                              </__NS1:asset-identification>
+                        </oval-sc:system_info>
+                        <oval-sc:collected_objects>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240001" version="56054702"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240002" version="56054705"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240004" version="56054711"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240005" version="56054714"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240006" version="56054717"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240007" version="56054720"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240009" version="56054726"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240011" version="56054732"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240013" version="56054738"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240017" version="56054750"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240020" version="56054759"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:2400211" version="56054763"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240023" version="575226513"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240025" version="56054779"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240026" version="56054780"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240027" version="56054783"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240029" version="56054789"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240030" version="56054792"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240037" version="56054819"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240038" version="56054822"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240039" version="56054825"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240040" version="56054828"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240045" version="2"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240052" version="56054765"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:640053" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:610055" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:66005700" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:67005800" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:68006000" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:68006100" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:52006300" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:66005500" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:690066" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:700067" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:68006200" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240069" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240070" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240071" version="1"></oval-sc:object>
+                              <oval-sc:object flag="does not exist" id="oval:mil.disa.stig.chrome:obj:240072" version="1"></oval-sc:object>
+                        </oval-sc:collected_objects>
+                  </oval-sc:oval_system_characteristics>
+            </oval-res:system>
+      </oval-res:results>
+</oval-res:oval_results>
