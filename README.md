@@ -1,8 +1,15 @@
 # stigtools
-toolkit to help manage stigs. rewrite of [zincarla/STIGSupport](https://github.com/zincarla/STIGSupport)
+toolkit to help manage stigs. Rewrite of [zincarla/STIGSupport](https://github.com/zincarla/STIGSupport)
 
-```
-It "Convert-SCC converts files" {
+The awesomest command converts SCC output right to a .CKL file.
+
+First, save the whole STIG library using `Save-StigLibrary`
+
+![image](https://user-images.githubusercontent.com/8278033/119815150-88fff580-beeb-11eb-97d7-6d436107cd8e.png)
+
+Then run `Convert-SCC`
+
+```powershell
     $params = @{
         LibraryPath     = "/home/runner/work/stigtools/stigtools/tests/stigs"
         ResultsPath     = "/home/runner/work/stigtools/stigtools/tests/SCC"
@@ -10,30 +17,13 @@ It "Convert-SCC converts files" {
         WarningVariable = "warning"
         WarningAction   = "SilentlyContinue"
     }
-    $results = Convert-SCC @params
+    Convert-SCC @params
+```
 
-    $results.Count | Should -Be 6
-    "$warning" | Should -Match "Vuln SV-221580r615937_rule not found"
-}
+![image](https://user-images.githubusercontent.com/8278033/119814796-1abb3300-beeb-11eb-94d4-0e26d1b13c34.png)
 
-It "Read-Checklist reads a checklist" {
-    $results = Read-Checklist -Path /tmp/winserver_U_Windows_Firewall_STIG_V1R7.ckl
-    $results.ComputerName | Should -Be "winserver"
-    $results.HostIP | Should -Be "192.168.0.48"
-    $results.Classifcation | Should -Be "UNCLASSIFIED"
-    $results.Title | Should -Be "Windows Firewall with Advanced Security Security Technical Implementation Guide"
-    $results.Vulns | Select-Object -First 1 -ExpandProperty Status | Should -Be "Open"
-}
+You can also read checklists and work with the data.
 
-
-It "Set-NRtoOpen sets not reviewed to open" {
-    $read = Read-Checklist -Path /tmp/winserver_U_Windows_Firewall_STIG_V1R7.ckl
-    $nr = $read.vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" }
-    $results = Set-NRtoOpen -Path /tmp/winserver_U_Windows_Firewall_STIG_V1R7.ckl
-    $read = Read-Checklist -Path /tmp/winserver_U_Windows_Firewall_STIG_V1R7.ckl
-    $nr2 = $read.vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" }
-    $results.BaseName | Should -match "winserver_U_Windows_Firewall_STIG_V1R7"
-    $nr.Count | Should -BeGreaterThan $nr2.Count
-    $nr2 | Should -BeNull
-}
+```powershell
+Read-Checklist -Path /tmp/winserver_U_Windows_Firewall_STIG_V1R7.ckl
 ```
