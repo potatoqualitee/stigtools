@@ -55,8 +55,6 @@ function Convert-NessusAudit {
         [string]$Destination
     )
     process {
-        $ckldata = Import-StigCKL -Path $TemplatePath
-
         Write-Progress -Activity "Converting" -PercentComplete 0
         $completedcount = 0
         $files = Get-ChildItem -Path $Path
@@ -66,46 +64,87 @@ function Convert-NessusAudit {
 
         foreach ($file in $files) {
             $xml = [xml](Get-Content -Path $file.FullName)
-            $reports = $xml.NessusClientData_v2.Report.ReportHost.ReportItem | Where-Object PluginFamily -eq "Policy Compliance"
-            Write-Verbose "Processing $($reports.count) results"
-            foreach ($report in $reports) {
-                $initialresult = $report.'compliance-result'
-                #"Open","NotAFinding","Not_Reviewed", "Not_Applicable"
-                $result = switch ($initialresult) {
-                    "PASSED" { "NotAFinding" }
-                    "FAILED" { "Open" }
-                    "WARNING" { "Not_Reviewed" }
-                    "ERROR" { "Not_Reviewed" }
+            $hosts = $xml.NessusClientData_v2.Report.ReportHost
+            foreach ($device in $hosts) {
+                $allitems = @()
+                $ckldata = Import-StigCKL -Path $TemplatePath
+                $hostname = ($device.HostProperties.tag | Where-Object Name -eq 'host-fqdn').'#text'
+                if (-not $hostname) {
+                    $hostname = ($device.HostProperties.tag | Where-Object Name -eq 'host-ip').'#text'
+                }
+                if (-not $hostname) {
+                    $hostname = $device.name
+                }
+                $reports = $device.ReportItem | Where-Object PluginFamily -eq "Policy Compliance"
+
+                Write-Verbose "Processing $($reports.count) results"
+                foreach ($report in $reports) {
+                    $initialresult = $report.'compliance-result'
+                    #"Open","NotAFinding","Not_Reviewed", "Not_Applicable"
+                    $result = switch ($initialresult) {
+                        "PASSED" { "NotAFinding" }
+                        "FAILED" { "Open" }
+                        "WARNING" { "Not_Reviewed" }
+                        "ERROR" { "Not_Reviewed" }
+                    }
+
+                    $details = $report.'compliance-actual-value'
+                    $comments = $report.'compliance-policy-value'
+                    $vulnid = $report.'compliance-reference' -Split '\|' | Select-Object -Last 1
+
+                    if (-not $vulnid) {
+                        continue
+                    }
+
+                    $allitems += [PSCustomObject]@{
+                        CKLData  = $ckldata
+                        VulnID   = $vulnid
+                        Details  = $details
+                        Comments = $comments
+                        Result   = $result
+                    }
                 }
 
-                $details = $report.'compliance-actual-value'
-                $comments = $report.'compliance-policy-value'
-                $vulnid = $report.'compliance-reference' -Split '\|' | Select-Object -Last 1
+                $groups = $allitems | Group-Object VulnID
 
-                if ($vulnid -eq "V-41047") {
-                    # ADD SUPPORT FOR DUPES
-                    # ADD SUPPORT FOR HOST NAMES
-                    write-warning $result
+                foreach ($group in $groups) {
+                    if ($group.count -eq 1) {
+                        $params = @{
+                            CKLData  = $group.Group.ckldata
+                            VulnID   = $group.Group.vulnid
+                            Details  = $group.Group.details
+                            Comments = $group.Group.comments
+                            Result   = $group.Group.result
+                        }
+                        Write-Verbose "Writing $($group.Name)"
+                        Set-VulnCheckResult @params
+                    } else {
+                        # V-41047 should be open
+                        if ($group.Group.Result -contains "Open") {
+                            $result = "Open"
+                        } elseif ($group.Group.Result -contains "NotAFinding") {
+                            $result = "NotAFinding"
+                        } else {
+                            $result = "Not_Reviewed"
+                        }
+                        $details = $group.Group.Details -join "`n"
+                        $comments = $group.Group.Comments -join "`n"
+                        $params = @{
+                            CKLData  = $ckldata
+                            VulnID   = $group.Name
+                            Details  = $details
+                            Comments = $comments
+                            Result   = $result
+                        }
+                        Set-VulnCheckResult @params
+                    }
                 }
-                $params = @{
-                    CKLData  = $ckldata
-                    VulnID   = $vulnid
-                    Details  = $details
-                    Comments = $comments
-                    Result   = $result
-                }
-                if ($vulnid) {
-                    Write-Verbose "Writing $vulnid"
-                    Set-VulnCheckResult @params
-                } else {
-                    $report.'compliance-reference' | Out-Host
-                }
+                $completedcount++
+                Write-Progress -Activity "Converting $filename for $hostname" -PercentComplete (($completedcount * 100) / $files.Count)
+                $newfilename = Join-Path -Path $Destination -ChildPath "$($xml.NessusClientData_v2.Report.name)-$hostname.ckl"
+                Export-StigCKL -XMLData $ckldata -Path $newfilename
+                Get-ChildItem -Path $newfilename
             }
-            $completedcount++
-            Write-Progress -Activity "Converting $filename" -PercentComplete (($completedcount * 100) / $files.Count)
-            $newfilename = Join-Path -Path $Destination -ChildPath "$((Get-ChildItem -Path $TemplatePath).BaseName)-$($file.BaseName).ckl"
-            Export-StigCKL -XMLData $ckldata -Path $newfilename
-            Get-ChildItem -Path $newfilename
         }
         Write-Progress -Activity "Converting" -PercentComplete 100 -Completed
     }
