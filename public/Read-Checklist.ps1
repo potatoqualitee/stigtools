@@ -10,19 +10,27 @@ function Read-Checklist {
         Read-Checklist -Path C:\temp\output\winserver_U_Windows_Firewall_STIG_V1R7.ckl
 
         Reads C:\temp\output\winserver_U_Windows_Firewall_STIG_V1R7.ckl
+
+    .EXAMPLE
+        Get-ChildItem C:\temp\output | Read-Checklist
+
+        Reads all checklists in C:\temp\output
 #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory, ValueFromPipeline)]
-        [ValidateScript( { Test-Path -Path $PSItem })]
         [Alias("FullName")]
-        [string[]]$Path
+        [psobject[]]$Path
     )
     process {
-        $files = Get-ChildItem -Path $Path
+        if (-not $Path.FullName) {
+            $files = Get-ChildItem -Path $Path -Filter *.ckl
+        } else {
+            $files = $Path
+        }
         try {
             foreach ($file in $files) {
-                $xml = [xml](Get-Content -Path $file.FullName -Raw)
+                $xml = [xml](Get-Content -Path $file.FullName -Raw -Encoding UTF8)
                 $output = @{}
                 $computer = $xml.Checklist.Asset
                 $sidata = $xml.Checklist.Stigs.iSTIG.STIG_INFO.SI_DATA

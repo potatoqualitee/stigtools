@@ -19,6 +19,6 @@ function Import-CCIList {
         [string]$Path
     )
     process {
-        [xml](Get-Content -Path $Path)
+        [xml](Get-Content -Path $Path -Encoding UTF8)
     }
 }

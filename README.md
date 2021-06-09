@@ -14,8 +14,6 @@ Then run `Convert-SCC`
         LibraryPath     = "/home/runner/work/stigtools/stigtools/tests/stigs"
         ResultsPath     = "/home/runner/work/stigtools/stigtools/tests/SCC"
         Destination     = "/tmp"
-        WarningVariable = "warning"
-        WarningAction   = "SilentlyContinue"
     }
     Convert-SCC @params
 ```
@@ -25,5 +23,15 @@ Then run `Convert-SCC`
 You can also read checklists and work with the data.
 
 ```powershell
-Read-Checklist -Path /tmp/winserver_U_Windows_Firewall_STIG_V1R7.ckl
+Read-Checklist -Path C:\temp\output\winserver_U_Windows_Firewall_STIG_V1R7.ckl
+```
+
+![image](https://user-images.githubusercontent.com/8278033/121315948-1c342480-c909-11eb-9716-c2e4f0527417.png)
+
+
+Or you can even pipe in a bunch of checklist files and read those, instead of opening them one by one in STIG Viewer
+
+
+```powershell
+Get-ChildItem C:\temp\output | Read-Checklist
 ```
