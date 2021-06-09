@@ -42,6 +42,14 @@ function Convert-NessusAudit {
             Destination = "$home\Downloads\esx"
         }
         Convert-NessusAudit @params
+
+    .EXAMPLE
+        $params = @{
+            TemplatePath = "$home\Downloads\Firewall\firewall.ckl"
+            Path = "$home\Downloads\Firewall\2.nessus"
+            Destination = "$home\Downloads\Firewall\"
+        }
+        Convert-NessusAudit @params
     #>
     param(
         [Parameter(Mandatory)]
@@ -84,8 +92,7 @@ function Convert-NessusAudit {
                     $result = switch ($initialresult) {
                         "PASSED" { "NotAFinding" }
                         "FAILED" { "Open" }
-                        "WARNING" { "Not_Reviewed" }
-                        "ERROR" { "Not_Reviewed" }
+                        Default { "Not_Reviewed" }
                     }
 
                     $details = $report.'compliance-actual-value'
