@@ -37,7 +37,7 @@ function Set-CKLHostData {
         Set-CKLHostData -CKLData $CKLData -AutoFill
 
     .EXAMPLE
-        Set-CKLHostData -CKLData $CKLData -Hostname workstation -FQDNworkstation.Some.Domain.com" -Mac "00-00-00-..." -IP 127.0.0.1
+        Set-CKLHostData -CKLData $CKLData -Hostname workstation -FQDN workstation.Some.Domain.com" -Mac "00-00-00-..." -IP 127.0.0.1
 #>
     [CmdletBinding()]
     param
