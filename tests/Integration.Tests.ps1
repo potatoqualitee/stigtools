@@ -34,5 +34,19 @@ Describe "Integration Tests" -Tag "IntegrationTests" {
             $nr.Count | Should -BeGreaterThan $nr2.Count
             $nr2 | Should -BeNull
         }
+
+
+        It "Convert-NessusAudit converts an audit file to a stig checklist" {
+            $params = @{
+                TemplatePath = "/home/runner/work/stigtools/stigtools/tests/nessus/win10.ckl"
+                Path         = "/home/runner/work/stigtools/stigtools/tests/nessus/1.nessus"
+                Destination  = "/tmp"
+            }
+            $results = Convert-NessusAudit @params
+            $results.BaseName | Should -match "Windows 10"
+            $read = Read-Checklist -Path $results.FullName
+            ($read.vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count | Should -Be 104
+            ($read.vulns.status | Measure-Object).Count | Should -Be 285
+        }
     }
 }
