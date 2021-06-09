@@ -63,7 +63,7 @@ function Convert-NessusAudit {
         }
 
         foreach ($file in $files) {
-            $xml = [xml](Get-Content -Path $file.FullName)
+            $xml = [xml](Get-Content -Path $file.FullName -Encoding UTF8)
             $hosts = $xml.NessusClientData_v2.Report.ReportHost
             foreach ($device in $hosts) {
                 $allitems = @()
