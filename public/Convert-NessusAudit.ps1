@@ -83,6 +83,7 @@ function Convert-NessusAudit {
                 if (-not $hostname) {
                     $hostname = $device.name
                 }
+
                 $reports = $device.ReportItem | Where-Object PluginFamily -eq "Policy Compliance"
 
                 Write-Verbose "Processing $($reports.count) results"
@@ -146,6 +147,19 @@ function Convert-NessusAudit {
                         Set-VulnCheckResult @params
                     }
                 }
+                if ($hostname -match ".") {
+                    $computername = $hostname -split "\." | Select-Object -First 1
+                } else {
+                    $computername = $hostname
+                }
+                $hostdata = @{
+                    CKLData = $ckldata
+                    IP = ($device.HostProperties.tag | Where-Object Name -eq 'host-ip').'#text'
+                    FQDN = $hostname
+                    Hostname = $computername
+                }
+                Set-CKLHostData @hostdata
+
                 $completedcount++
                 Write-Progress -Activity "Converting $filename for $hostname" -PercentComplete (($completedcount * 100) / $files.Count)
                 $newfilename = Join-Path -Path $Destination -ChildPath "$($xml.NessusClientData_v2.Report.name)-$hostname.ckl"
