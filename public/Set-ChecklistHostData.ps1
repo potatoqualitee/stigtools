@@ -30,7 +30,7 @@ function Set-CKLHostData {
     .PARAMETER WebDBSite
         Sets the web or db site STIG for the CKL. Will autoset IsWebOrDB to true if this is provided and IsWebOrDB is not.
 
-    .PARAMTER WebDBInstance
+    .PARAMETER WebDBInstance
         Sets the web or db instance STIG for the CKL. Will autoset IsWebOrDB to true if this is provided and IsWebOrDB is not.
 
     .EXAMPLE
