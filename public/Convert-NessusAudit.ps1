@@ -7,7 +7,7 @@ function Convert-NessusAudit {
         Loads a set of audit files and saves them as checklists in the format of a given a template file
 
     .PARAMETER TemplatePath
-        Full path to the CKL file. This file should be blank, or only contain answers that are not included in the XCCDF file
+        Full path to the CKL or XCCDF file. This file should be blank, or only contain answers that are not included in the XCCDF file
 
     .PARAMETER Name
         Optional name for Stig file, otherwise, it's built off of the hostname and checklist
@@ -45,6 +45,14 @@ function Convert-NessusAudit {
 
     .EXAMPLE
         $params = @{
+            TemplatePath = "C:\temp\stigs\U_Windows_Firewall_V1R7_STIG\U_Windows_Firewall_V1R7_Manual_STIG\U_Windows_Firewall_STIG_V1R7_Manual-xccdf.xml"
+            Path = "$home\Downloads\Firewall\2.nessus"
+            Destination = "$home\Downloads\Firewall\"
+        }
+        Convert-NessusAudit @params
+
+    .EXAMPLE
+        $params = @{
             TemplatePath = "$home\Downloads\Firewall\firewall.ckl"
             Path = "$home\Downloads\Firewall\2.nessus"
             Destination = "$home\Downloads\Firewall\"
@@ -66,6 +74,11 @@ function Convert-NessusAudit {
         Write-Progress -Activity "Converting" -PercentComplete 0
         $completedcount = 0
         $files = Get-ChildItem -Path $Path
+
+        if ($TemplatePath.EndsWith("xml") -and $TemplatePath -match "xccdf") {
+            $TemplatePath = (Convert-ManualXCCDF -Path $TemplatePath -Destination (New-TempDirectory).FullName).FullName
+        }
+
         if (-not $PSBoundParameters.Name) {
             $Name = (Get-ChildItem -Path $TemplatePath).BaseName.Replace("_Manual-xccdf","")
         }
@@ -153,16 +166,21 @@ function Convert-NessusAudit {
                     $computername = $hostname
                 }
                 $hostdata = @{
-                    CKLData = $ckldata
-                    IP = ($device.HostProperties.tag | Where-Object Name -eq 'host-ip').'#text'
-                    FQDN = $hostname
+                    CKLData  = $ckldata
+                    IP       = ($device.HostProperties.tag | Where-Object Name -eq 'host-ip').'#text'
+                    FQDN     = $hostname
                     Hostname = $computername
                 }
                 Set-CKLHostData @hostdata
 
                 $completedcount++
-                Write-Progress -Activity "Converting $filename for $hostname" -PercentComplete (($completedcount * 100) / $files.Count)
-                $newfilename = Join-Path -Path $Destination -ChildPath "$($xml.NessusClientData_v2.Report.name)-$hostname.ckl"
+                if ($PSBoundParameters.Name) {
+                    $newfilename = Join-Path -Path $Destination -ChildPath "$($Name).ckl"
+                } else {
+                    $newfilename = Join-Path -Path $Destination -ChildPath "$($xml.NessusClientData_v2.Report.name)-$hostname.ckl"
+                }
+
+                Write-Progress -Activity "Converting $newfilename for $hostname" -PercentComplete (($completedcount * 100) / $files.Count)
                 Export-StigCKL -XMLData $ckldata -Path $newfilename
                 Get-ChildItem -Path $newfilename
             }
