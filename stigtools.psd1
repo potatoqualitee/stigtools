@@ -40,6 +40,7 @@
         'Convert-ManualXCCDF',
         'Convert-SCC',
         'Convert-XCCDF',
+        'Expand-StigLibrary',
         'Get-CCIVulnReference',
         'Get-ChecklistHostData',
         'Get-ChecklistInfo',
