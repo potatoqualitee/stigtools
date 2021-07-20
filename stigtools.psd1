@@ -5,7 +5,7 @@
 #
 @{
     # Version number of this module.
-    ModuleVersion     = '0.0.1'
+    ModuleVersion     = '0.0.2'
 
     # ID used to uniquely identify this module
     GUID              = 'db23097a-c46d-4ec8-a34f-6a31469218f9'
@@ -45,19 +45,17 @@
         'Get-ChecklistHostData',
         'Get-ChecklistInfo',
         'Get-StigFile',
-        'Get-STigMetrics',
-        'Get-VulnCheckResult',
+        'Get-StigMetrics',
         'Merge-Checklist',
         'New-PoamTemplate',
         'Read-Checklist',
         'Repair-Checklist',
         'Save-StigFile',
-        'Save-STigLibrary',
+        'Save-StigLibrary',
         'Set-ChecklistHostData',
         'Set-NRtoOpen',
-        'Set-VulnCheckResult',
-        'Set-VulnFindingAttribute',
-        'Update-ChecklistVersion'
+        'Update-ChecklistVersion',
+        'Update-VulnResult'
     )
 
     CmdletsToExport   = @()

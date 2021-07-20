@@ -48,5 +48,22 @@ Describe "Integration Tests" -Tag "IntegrationTests" {
             ($read.vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count | Should -Be 104
             ($read.vulns.status | Measure-Object).Count | Should -Be 285
         }
+
+
+        It "Update-VulnResult updates from files" {
+            $win10 = "/home/runner/work/stigtools/stigtools/tests/nessus/win10.ckl"
+            $win11 = "/home/runner/work/stigtools/stigtools/tests/nessus/win11.ckl"
+            $win12 = "/home/runner/work/stigtools/stigtools/tests/nessus/win12.ckl"
+            $results = (Read-Checklist -Path /home/runner/work/stigtools/stigtools/tests/nessus/win10.ckl).Vulns | Update-VulnResult -Path $win11, $win12
+
+            $win10count = ((Read-Checklist -Path $win10).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
+
+            $win11count = ((Read-Checklist -Path $win11).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
+
+            $win12count = ((Read-Checklist -Path $win12).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
+
+            $win10count | Should -Be $win11count
+            $win10count | Should -Be $win12count
+        }
     }
 }
