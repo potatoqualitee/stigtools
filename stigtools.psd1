@@ -45,19 +45,17 @@
         'Get-ChecklistHostData',
         'Get-ChecklistInfo',
         'Get-StigFile',
-        'Get-STigMetrics',
-        'Get-VulnCheckResult',
+        'Get-StigMetrics',
         'Merge-Checklist',
         'New-PoamTemplate',
         'Read-Checklist',
         'Repair-Checklist',
         'Save-StigFile',
-        'Save-STigLibrary',
+        'Save-StigLibrary',
         'Set-ChecklistHostData',
         'Set-NRtoOpen',
-        'Set-VulnCheckResult',
-        'Set-VulnFindingAttribute',
-        'Update-ChecklistVersion'
+        'Update-ChecklistVersion',
+        'Update-VulnResult'
     )
 
     CmdletsToExport   = @()

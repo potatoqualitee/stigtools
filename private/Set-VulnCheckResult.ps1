@@ -22,7 +22,7 @@ function Set-VulnCheckResult {
         Finding comments
 
     .PARAMETER Result
-        Final Result (Open, Not_Reviewed, or NotAFinding)
+        Final Result (Open, Not_Reviewed, Not_Applicable, or NotAFinding)
 
     .EXAMPLE
         Set-VulnCheckResult -CKLData $CKLData -VulnID V-11111 -Details "Not set correctly" -Comments "Checked by xyz" -Result Open
