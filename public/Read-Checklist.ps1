@@ -58,12 +58,18 @@ function Read-Checklist {
                         }
                         1..25 | ForEach-Object {
                             $currentcount++
-                            $index = $currentcount + $PSItem
+                            $index = $currentcount
                             $item = $data[$index]
                             $name = $item.VULN_ATTRIBUTE
                             if ($name) {
                                 $name = $name.Replace("_","").Replace(" ","")
                                 $object.$name = $item.ATTRIBUTE_DATA.ToString().Trim().TrimEnd("`n")
+
+                                if ($name -eq "RuleID") {
+                                    $vulnid = $item.ATTRIBUTE_DATA.ToString().Trim()
+                                    $vulnid = $vulnid.TrimStart("S").Split("r") | Select-Object -First 1
+                                    $object.VulnID = $vulnid
+                                }
                             }
                         }
                         $allvulns += [pscustomobject]$object
