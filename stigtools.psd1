@@ -5,10 +5,10 @@
 #
 @{
     # Version number of this module.
-    ModuleVersion     = '0.0.2'
+    ModuleVersion     = '0.0.1'
 
     # ID used to uniquely identify this module
-    GUID              = 'db23097a-c46d-4ec8-a34f-6a31469218f9'
+    GUID              = 'fb5793f9-9211-47e5-a1b3-1f04e254868f'
 
     # Author of this module
     Author            = 'Chrissy LeMaire'
