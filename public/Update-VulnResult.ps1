@@ -1,16 +1,24 @@
 function Update-VulnResult {
     <#
     .SYNOPSIS
-        Sets all NotReviewed in a checklist to Open
+        Updates Vulnerability results for a checklist file
 
     .DESCRIPTION
-        Loads a checklist, and sets all Not_Reviewed to Open, then saves it
+        Loads a checklist, and sets the new status, then saves it
 
     .PARAMETER Path
         Full path to the checklist file
 
+    .PARAMETER VulnID
+        Vuln_Num of the Vuln to Set
+
+    .PARAMETER Result
+        Final Result (Open, Not_Reviewed, Not_Applicable, or NotAFinding)
+
     .EXAMPLE
-        Update-VulnResult -Path C:\CKLs\MyChecklist.ckl
+        Read-Checklist -Path .\tests\nessus\win10.ckl -VulnsOnly | Update-VulnResult -Path .\tests\nessus\win11.ckl, .\tests\nessus\win12.ckl
+
+        Updates win11 and win12 with the results of win10
 #>
     [CmdletBinding()]
     param(
@@ -20,13 +28,6 @@ function Update-VulnResult {
         [string[]]$Path,
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)]
         [string]$VulnID,
-        [Parameter(ValueFromPipelineByPropertyName)]
-        [string]$RuleID,
-        [Alias("Finding")]
-        [Parameter(ValueFromPipelineByPropertyName)]
-        [string]$Details,
-        [Parameter(ValueFromPipelineByPropertyName)]
-        [string]$Comments,
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)]
         [ValidateSet("Open","NotAFinding","Not_Reviewed", "Not_Applicable")]
         [Alias("Status")]
@@ -54,6 +55,7 @@ function Update-VulnResult {
     }
     process {
         foreach ($file in $files) {
+            # just guess that it has about 300 checks
             if ((($i++) % 3) -eq 0) { $progresscount++ }
             Set-VulnCheckResult -XMLData $hash[$file.FullName] -VulnID $VulnID -Result $Result
             Write-Progress -Activity "Setting CKLs" -PercentComplete $progresscount -Id 1
