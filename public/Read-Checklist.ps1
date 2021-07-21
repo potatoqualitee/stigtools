@@ -6,6 +6,9 @@ function Read-Checklist {
     .PARAMETER Path
         Full file path to the checklist File
 
+    .PARAMETER VulnsOnly
+        Only return the vuln list
+
     .EXAMPLE
         Read-Checklist -Path C:\temp\output\winserver_U_Windows_Firewall_STIG_V1R7.ckl
 
@@ -15,12 +18,19 @@ function Read-Checklist {
         Get-ChildItem C:\temp\output | Read-Checklist
 
         Reads all checklists in C:\temp\output
+
+    .EXAMPLE
+        Read-Checklist -Path C:\temp\output\winserver_U_Windows_Firewall_STIG_V1R7.ckl -VulnsOnly
+
+        Reads C:\temp\output\winserver_U_Windows_Firewall_STIG_V1R7.ckl and only returns vuln info
+
 #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory, ValueFromPipeline)]
         [Alias("FullName")]
-        [psobject[]]$Path
+        [psobject[]]$Path,
+        [switch]$VulnsOnly
     )
     process {
         if (-not $Path.FullName) {
@@ -76,7 +86,11 @@ function Read-Checklist {
                     }
                 }
                 $output.Vulns = $allvulns
-                [pscustomobject]$output | Select-Object ComputerName, HostIP, ComputerObject, Classifcation, FileName, Description, ReleaseInfo, Title, Vulns
+                if ($VulnsOnly) {
+                    [pscustomobject]$output | Select-Object -ExpandProperty Vulns
+                } else {
+                    [pscustomobject]$output | Select-Object ComputerName, HostIP, ComputerObject, Classifcation, FileName, Description, ReleaseInfo, Title, Vulns
+                }
             }
         } catch {
             Write-Warning -Message "Can't process $file`: $PSItem"
