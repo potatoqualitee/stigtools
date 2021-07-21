@@ -54,16 +54,22 @@ Describe "Integration Tests" -Tag "IntegrationTests" {
             $win10 = "/home/runner/work/stigtools/stigtools/tests/nessus/win10.ckl"
             $win11 = "/home/runner/work/stigtools/stigtools/tests/nessus/win11.ckl"
             $win12 = "/home/runner/work/stigtools/stigtools/tests/nessus/win12.ckl"
-            $results = (Read-Checklist -Path /home/runner/work/stigtools/stigtools/tests/nessus/win10.ckl).Vulns | Update-VulnResult -Path $win11, $win12
+            $win11countbefore = ((Read-Checklist -Path $win11).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
+
+            $win12countbefore = ((Read-Checklist -Path $win12).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
+
+            $null = (Read-Checklist -Path /home/runner/work/stigtools/stigtools/tests/nessus/win10.ckl).Vulns | Update-VulnResult -Path $win11, $win12
 
             $win10count = ((Read-Checklist -Path $win10).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
 
-            $win11count = ((Read-Checklist -Path $win11).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
+            $win11countafter = ((Read-Checklist -Path $win11).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
 
-            $win12count = ((Read-Checklist -Path $win12).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
+            $win12countafter = ((Read-Checklist -Path $win12).vulns.status | Where-Object { $PSItem -eq "Not_Reviewed" } | Measure-Object).Count
 
-            $win10count | Should -Be $win11count
-            $win10count | Should -Be $win12count
+            $win10count | Should -Not -Be $win11countbefore
+            $win10count | Should -Not -Be $win12countbefore
+            $win10count | Should -Be $win11countafter
+            $win10count | Should -Be $win12countafter
         }
     }
 }
