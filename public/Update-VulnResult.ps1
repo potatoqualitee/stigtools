@@ -49,16 +49,28 @@ function Update-VulnResult {
         $hash = @{ }
 
         foreach ($file in $files) {
-            $hash[$file.FullName] = Import-StigCKL -Path $file.FullName
+            $hash[$file.FullName] = Import-StigCKL -Path $file.FullName -ErrorAction SilentlyContinue
         }
         $progresscount = 0
     }
     process {
         foreach ($file in $files) {
+            Write-Verbose -Message "Processing $file"
             # just guess that it has about 300 checks, it'll just loop as needed
             if ((($i++) % 3) -eq 0) { $progresscount++ }
-            Set-VulnCheckResult -XMLData $hash[$file.FullName] -VulnID $VulnID -Result $Result
-            Write-Progress -Activity "Setting CKLs" -PercentComplete $progresscount -Id 1
+            try {
+                Write-Progress -Activity "Setting CKLs" -PercentComplete $progresscount -Id 1
+                $parms = @{
+                    XMLdata       = $hash[$file.FullName]
+                    VulnID        = $VulnID
+                    Result        = $Result
+                    ErrorAction   = "SilentlyContinue"
+                    WarningAction = "SilentlyContinue"
+                }
+                Set-VulnCheckResult @parms
+            } catch {
+                Write-Verbose -Message "Issue with $vulnID - $PSItem"
+            }
             if ($progresscount -eq 100) {
                 $progresscount = 0
             }
