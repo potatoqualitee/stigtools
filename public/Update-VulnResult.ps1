@@ -55,7 +55,7 @@ function Update-VulnResult {
     }
     process {
         foreach ($file in $files) {
-            # just guess that it has about 300 checks
+            # just guess that it has about 300 checks, it'll just loop as needed
             if ((($i++) % 3) -eq 0) { $progresscount++ }
             Set-VulnCheckResult -XMLData $hash[$file.FullName] -VulnID $VulnID -Result $Result
             Write-Progress -Activity "Setting CKLs" -PercentComplete $progresscount -Id 1
