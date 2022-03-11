@@ -17,10 +17,10 @@
     CompanyName       = 'Chrissy LeMaire'
 
     # Copyright statement for this module
-    Copyright         = '2021 Chrissy LeMaire'
+    Copyright         = '2022 Chrissy LeMaire'
 
     # Description of the functionality provided by this module
-    Description       = 'DISA STIG Automation toolkit'
+    Description       = 'DISA STIG Automation toolkit (very alpha release)'
 
     # Minimum version of the Windows PowerShell engine required by this module
     PowerShellVersion = '5.1'
@@ -79,7 +79,7 @@
             IconUri      = 'https://user-images.githubusercontent.com/8278033/68308152-a886c180-00ac-11ea-880c-ef6ff99f5cd4.png'
 
             # Indicates this is a pre-release/testing version of the module.
-            IsPrerelease = 'False'
+            IsPrerelease = 'true'
         }
     }
 }

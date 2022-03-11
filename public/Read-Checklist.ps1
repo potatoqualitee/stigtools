@@ -82,6 +82,9 @@ function Read-Checklist {
                                 }
                             }
                         }
+                        if (-not $object.VulnID -and $object.RuleVer) {
+                            $object.VulnID = $object.RuleVer
+                        }
                         $allvulns += [pscustomobject]$object
                     }
                 }
